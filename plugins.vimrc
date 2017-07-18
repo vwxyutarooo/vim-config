@@ -20,16 +20,17 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mattn/emmet-vim'
 Plugin 'ervandew/supertab'
 Plugin 'Shougo/unite.vim'
-Plugin 'tpope/vim-fugitive'
 Plugin 'vim-syntastic/syntastic'
 "Plugin 'w0rp/ale'
 Plugin 'terryma/vim-expand-region'
 Plugin 'tpope/vim-eunuch'
-Plugin 'Yggdroot/indentLine'
+Plugin 'justinmk/vim-sneak'
+Plugin 'heavenshell/vim-jsdoc'
 
 " Integration
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
+Plugin 'tpope/vim-fugitive'
 
 " Extend UI
 Plugin 'scrooloose/nerdtree'
@@ -39,6 +40,7 @@ Plugin 'vim-scripts/nerdtree-ack'
 Plugin 'vim-airline/vim-airline'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'Yggdroot/indentLine'
 
 " Languages
 Plugin 'pangloss/vim-javascript'
@@ -46,6 +48,8 @@ Plugin 'posva/vim-vue'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'wavded/vim-stylus'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 
 " Syntax

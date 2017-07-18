@@ -61,3 +61,8 @@ let g:indentLine_char = '│'
 let g:indentLine_leadingSpaceEnabled=1
 let g:indentLine_leadingSpaceChar = '.'
 
+" markdown
+set nofoldenable
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini', 'js=javascript']
+
