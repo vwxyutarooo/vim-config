@@ -11,6 +11,8 @@ set number
 set cursorline
 set clipboard=unnamed
 set autoread
+set shiftwidth=2
+set tabstop=2
 set noswapfile
 set encoding=utf-8
 set fileencoding=utf-8
@@ -25,15 +27,12 @@ highlight SpecialKey guifg=#474D56
 highlight NonText guifg=#474D56
 
 " NERDTree
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 " Open NERDTree on console vim startup
 let g:nerdtree_tabs_open_on_console_startup=1
-" Close NERDTree when all other windows were closed 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let NERDTreeShowHidden=1
+let g:nerdtree_tabs_autoclose=0
+let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.DS_Store', '\.git$', 'node_modules$']
 
 " FZF
@@ -66,3 +65,7 @@ set nofoldenable
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini', 'js=javascript']
 
+
+" Emmet
+let g:user_emmet_expandabbr_key='<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
