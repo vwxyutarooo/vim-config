@@ -11,13 +11,16 @@ set number
 set cursorline
 set clipboard=unnamed
 set autoread
-set shiftwidth=2
-set tabstop=2
 set noswapfile
 set encoding=utf-8
 set fileencoding=utf-8
 set listchars=eol:¬,tab:»-,trail:.
 set list
+
+set autoindent
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
 
 " Theme
 syntax enable
@@ -26,12 +29,13 @@ colorscheme quantum
 highlight SpecialKey guifg=#474D56
 highlight NonText guifg=#474D56
 
+" YouCompleteMe
+let g:ycm_key_list_select_completion = ['<Down>']
+
 " NERDTree
 autocmd vimenter * NERDTree
-map <C-n> :NERDTreeToggle<CR>
-" Open NERDTree on console vim startup
 let g:nerdtree_tabs_open_on_console_startup=1
-let g:nerdtree_tabs_autoclose=0
+" let g:nerdtree_tabs_autoclose=0
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.DS_Store', '\.git$', 'node_modules$']
 
@@ -65,7 +69,11 @@ set nofoldenable
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini', 'js=javascript']
 
-
 " Emmet
-let g:user_emmet_expandabbr_key='<Tab>'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+"let g:user_emmet_expandabbr_key='<Tab>'
+"imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<TAB>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
