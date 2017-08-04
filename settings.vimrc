@@ -1,3 +1,5 @@
+language en_US
+
 if has('patch-7.4.1778')
   set guicolors
 endif
