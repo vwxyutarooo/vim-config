@@ -7,7 +7,7 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 
 set number
 set cursorline
@@ -23,6 +23,10 @@ set autoindent
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
+
+" Key maps
+nmap <ESC><ESC> :noh<ENTER>
+nmap <C-p> :FZF<ENTER>
 
 " Theme
 syntax enable
@@ -53,10 +57,10 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
 
 set encoding=utf-8
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete:h11
+set guifont=SauceCodePro\ Nerd\ Font:h12
 let g:airline_powerline_fonts=1
 
 " indentLine
@@ -79,3 +83,4 @@ let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=do
 let g:UltiSnipsExpandTrigger="<TAB>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
