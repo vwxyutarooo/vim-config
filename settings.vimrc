@@ -49,25 +49,38 @@ let NERDTreeIgnore = ['\.DS_Store', '\.git$', 'node_modules$']
 let g:fzf_layout = { 'window': '-tabnew' }
 "let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" ALE
+let g:ale_sign_column_always = 1
+let g:airline#extensions#ale#enabled = 1
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+let g:ale_linters = {
+	\ 'html': [],
+	\ 'css': ['stylelint'],
+	\ 'javascript': ['eslint'],
+	\ 'vue': ['eslint']
+\ }
+let g:ale_fixers = {
+	\ 'javascript': ['eslint'],
+	\ 'css': ['stylelint']
+\ }
+let g:ale_linter_aliases = { 'vue': ['html', 'css', 'scss', 'javascript'] }
+"let g:ale_linter_aliases = { 'vue': 'css' }
 
+" devicons
 set encoding=utf-8
 set guifont=SauceCodePro\ Nerd\ Font:h12
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts = 1
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " indentLine
 let g:indentLine_fileTypeExclude = ['help', 'nerdtree', 'startify', 'tagbar', 'vimfiler', 'markdown', 'minimap']
 let g:indentLine_enabled = 1
 let g:indentLine_char = '│'
-let g:indentLine_leadingSpaceEnabled=1
+let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '.'
 
 " markdown
@@ -80,7 +93,7 @@ let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=do
 "imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<TAB>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger = "<TAB>"
+let g:UltiSnipsJumpForwardTrigger = "<c-b>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 

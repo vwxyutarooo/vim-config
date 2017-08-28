@@ -1,7 +1,7 @@
 ## vwxyutarooo/vim-config
 ### Setup
 #### Install plugin manager: [Vundle.vim](https://github.com/VundleVim/Vundle.vim)
-Installed location: '~/.vim/bundle/Vundle.vim'
+Installed location: `~/.vim/bundle/Vundle.vim`
 
 
 #### YouCompleteMe 
