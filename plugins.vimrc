@@ -8,7 +8,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-
 " Plugins
 " Code helping
 Plugin 'valloric/youcompleteme'
@@ -18,29 +17,27 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mattn/emmet-vim'
-"Plugin 'vim-syntastic/syntastic'
 Plugin 'w0rp/ale'
-Plugin 'SirVer/ultisnips'
-"Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-eunuch'
-"Plugin 'terryma/vim-expand-region'
 Plugin 'heavenshell/vim-jsdoc'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'godlygeek/tabular'
 
 " Integration
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 
 " Extend UI
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'vim-scripts/nerdtree-ack'
 Plugin 'vim-airline/vim-airline'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Yggdroot/indentLine'
+Plugin 'majutsushi/tagbar'
 
 " Languages
 Plugin 'pangloss/vim-javascript'
@@ -48,9 +45,7 @@ Plugin 'posva/vim-vue'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'wavded/vim-stylus'
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-
 
 " Syntax
 Plugin 'mhartington/oceanic-next'
