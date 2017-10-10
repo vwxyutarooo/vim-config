@@ -45,6 +45,7 @@ Plugin 'posva/vim-vue'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'wavded/vim-stylus'
+Plugin 'mxw/vim-jsx'
 Plugin 'plasticboy/vim-markdown'
 
 " Syntax
