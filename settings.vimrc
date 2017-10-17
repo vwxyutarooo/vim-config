@@ -23,8 +23,9 @@ set noswapfile
 
 set encoding=utf-8
 set fileencoding=utf-8
-set listchars=eol:¬,tab:»-,trail:.
+set listchars=eol:¬,tab:»-,trail:.,extends:>,precedes:<
 set list
+set conceallevel=0
 
 set autoindent
 set smartindent
@@ -40,8 +41,8 @@ syntax sync minlines=256
 
 " Key maps
 nmap <ESC><ESC> :noh<ENTER>
-nmap <C-p> :GFiles<ENTER>
-nmap <C-j> :FZF<ENTER>
+nmap <C-p> :FZF<ENTER>
+nmap <C-j> :GFiles?<ENTER>
 
 "iabbrev <// </<C-X><C-O>
 imap <C-Space> <C-X><C-O>
@@ -73,7 +74,14 @@ let NERDTreeIgnore = ['\.DS_Store', '\.git$', 'node_modules$']
 
 
 " FZF
+let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 let g:fzf_layout = { 'window': '-tabnew' }
+let g:fzf_action = {
+	\ 'enter': 'tabedit',
+	\ 'ctrl-t': 'edit',
+	\ 'ctrl-x': 'split',
+	\ 'ctrl-v': 'vsplit',
+\ }
 
 
 " ALE
@@ -111,9 +119,13 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 " indentLine
 let g:indentLine_fileTypeExclude = ['help', 'nerdtree', 'startify', 'tagbar', 'vimfiler', 'markdown', 'minimap']
 let g:indentLine_enabled = 1
+let g:indentLine_faster = 1
 let g:indentLine_char = '│'
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '.'
+"let g:indentLine_setConceal = 0
+"let g:indentLine_concealcursor = ''
+"let g:indentLine_conceallevel = 0
 
 
 " markdown
@@ -126,8 +138,8 @@ let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=do
 let g:user_emmet_install_global = 0
 let g:user_emmet_expandabbr_key = '<Tab>'
 let g:user_emmet_expandword_key = '<Tab>'
-autocmd FileType html,css,scss,styl EmmetInstall
-imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
+autocmd FileType html,css,scss,styl,vue EmmetInstall
+autocmd FileType html,css,scss,styl,vue map <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
 
 
 " vim-jsx
