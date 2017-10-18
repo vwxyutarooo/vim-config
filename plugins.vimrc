@@ -36,16 +36,16 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-airline/vim-airline'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'Yggdroot/indentLine'
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'majutsushi/tagbar'
 
 " Languages
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'posva/vim-vue'
 Plugin 'digitaltoad/vim-pug'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'wavded/vim-stylus'
-Plugin 'mxw/vim-jsx'
 Plugin 'plasticboy/vim-markdown'
 
 " Syntax

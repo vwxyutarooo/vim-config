@@ -116,16 +116,13 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
 
-" indentLine
-let g:indentLine_fileTypeExclude = ['help', 'nerdtree', 'startify', 'tagbar', 'vimfiler', 'markdown', 'minimap']
-let g:indentLine_enabled = 1
-let g:indentLine_faster = 1
-let g:indentLine_char = '│'
-let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_leadingSpaceChar = '.'
-"let g:indentLine_setConceal = 0
-"let g:indentLine_concealcursor = ''
-"let g:indentLine_conceallevel = 0
+" indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify', 'tagbar', 'vimfiler', 'markdown', 'minimap']
+autocmd VimEnter,Colorscheme * :highlight IndentGuidesOdd  guibg=grey26 guifg=grey22 ctermbg=black
+autocmd VimEnter,Colorscheme * :highlight IndentGuidesEven guibg=grey30 guifg=grey22 ctermbg=darkgrey
 
 
 " markdown
@@ -143,5 +140,5 @@ autocmd FileType html,css,scss,styl,vue map <expr> <tab> emmet#expandAbbrIntelli
 
 
 " vim-jsx
-let g:jsx_ext_required = 0
+let g:jsx_ext_required = 1
 
