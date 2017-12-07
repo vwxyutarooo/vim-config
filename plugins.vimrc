@@ -13,6 +13,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'valloric/youcompleteme'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'eugen0329/vim-esearch'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'terryma/vim-multiple-cursors'
@@ -23,11 +25,12 @@ Plugin 'heavenshell/vim-jsdoc'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'godlygeek/tabular'
+Plugin 'tpope/vim-surround'
+Plugin 'moll/vim-node'
 
 " Integration
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
-"Plugin 'tpope/vim-fugitive'
 
 " Extend UI
 Plugin 'scrooloose/nerdtree'
@@ -40,17 +43,17 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'majutsushi/tagbar'
 
 " Languages
-Plugin 'pangloss/vim-javascript'
+Plugin 'othree/yajs.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'posva/vim-vue'
+Plugin 'othree/html5.vim'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'wavded/vim-stylus'
 Plugin 'plasticboy/vim-markdown'
 
 " Syntax
 Plugin 'mhartington/oceanic-next'
-Plugin 'w0ng/vim-hybrid'
 Plugin 'tyrannicaltoucan/vim-quantum'
 
 
