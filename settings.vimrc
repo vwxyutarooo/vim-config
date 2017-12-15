@@ -44,24 +44,6 @@ set synmaxcol=256
 syntax sync minlines=256
 
 
-" Key maps
-nmap <ESC><ESC> :noh<ENTER>
-nmap <C-p> :FZF<ENTER>
-nmap <C-j> :GFiles?<ENTER>
-
-"iabbrev <// </<C-X><C-O>
-imap <C-Space> <C-X><C-O>
-
-map Q <Nop>
-
-autocmd FileType vue set cursorline!
-autocmd QuickFixCmdPost *grep* cwindow
-augroup vimrc-checktime
-	autocmd!
-	autocmd WinEnter * checktime
-augroup END
-
-
 " Theme
 syntax enable
 set background=dark
