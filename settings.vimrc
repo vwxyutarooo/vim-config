@@ -150,3 +150,5 @@ autocmd FileType html,css,scss,styl,vue map <expr> <tab> emmet#expandAbbrIntelli
 let g:jsx_ext_required = 1
 
 
+" vim-vue
+let g:vue_disable_pre_processors = 1
