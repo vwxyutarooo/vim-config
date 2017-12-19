@@ -45,12 +45,14 @@ syntax sync minlines=256
 
 
 " Theme
+" Check for :so $VIMRUNTIME/syntax/hitest.vim
 syntax enable
 set background=dark
 set termguicolors
 colorscheme quantum
 highlight SpecialKey guifg=#474D56
 highlight NonText guifg=#474D56
+highlight MatchParen cterm=underline ctermbg=6 gui=underline guibg=#425762 guifg=none
 
 
 " Ack
@@ -146,4 +148,5 @@ autocmd FileType html,css,scss,styl,vue map <expr> <tab> emmet#expandAbbrIntelli
 
 " vim-jsx
 let g:jsx_ext_required = 1
+
 
