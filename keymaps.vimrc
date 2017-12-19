@@ -1,8 +1,9 @@
 " Key maps
-nmap <ESC><ESC> :noh<ENTER>
-nmap ww <C-w>=
-nmap <C-p> :FZF<ENTER>
-nmap <C-j> :GFiles?<ENTER>
+noremap <ESC><ESC> :noh<ENTER>
+noremap <C-p> :FZF<ENTER>
+noremap <C-j> :GFiles?<ENTER>
+noremap <C-a> :ALEFix<ENTER>
+
 
 "iabbrev <// </<C-X><C-O>
 imap <C-Space> <C-X><C-O>
