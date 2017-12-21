@@ -40,7 +40,7 @@ set shiftwidth=2
 set softtabstop=2
 
 set lazyredraw
-set synmaxcol=256
+set synmaxcol=600
 syntax sync minlines=256
 
 
@@ -53,6 +53,8 @@ colorscheme quantum
 highlight SpecialKey guifg=#474D56
 highlight NonText guifg=#474D56
 highlight MatchParen cterm=underline ctermbg=6 gui=underline guibg=#425762 guifg=none
+highlight link ESearchFileName airline_tab
+highlight link ESearchMatch Search
 
 
 " Ack
@@ -114,6 +116,10 @@ if (has("guifont"))
 	set guifont=SauceCodePro\ Nerd\ Font:h12
 endif
 let g:airline_powerline_fonts = 1
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
 
 
 " airline

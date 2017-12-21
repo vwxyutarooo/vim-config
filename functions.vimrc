@@ -5,7 +5,6 @@ function! Multiple_cursors_before()
 		let s:old_ycm_whitelist = g:ycm_filetype_whitelist
 		let g:ycm_filetype_whitelist = {}
 		"call youcompleteme#DisableCursorMovedAutocommands()
-		"call deoplete#init#_disable()
 	catch
 		echo 'Failed to disable deoplete which may not available.'
 	endtry
@@ -16,7 +15,6 @@ function! Multiple_cursors_after()
 	try
 		let g:ycm_filetype_whitelist = s:old_ycm_whitelist
 		"call youcompleteme#EnableCursorMovedAutocommands()
-		"call deoplete#init#_enable()
 	catch
 		echo 'Failed to enable deoplete which may not available.'
 	endtry
