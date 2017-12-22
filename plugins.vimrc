@@ -42,6 +42,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'majutsushi/tagbar'
+Plugin 'vwxyutarooo/vim-nerdtree-syntax-highlight'
 
 " Languages
 Plugin 'othree/yajs.vim'

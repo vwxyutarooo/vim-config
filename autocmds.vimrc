@@ -18,9 +18,3 @@ augroup vimrc-checktime
 	autocmd WinEnter * checktime
 augroup END
 
-
-augroup devicons_nerdtree
-	autocmd FileType nerdtree setlocal list
-	autocmd FileType nerdtree setlocal listchars=space:.
-	autocmd FileType nerdtree setlocal nolist
-augroup END
