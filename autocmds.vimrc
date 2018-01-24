@@ -18,3 +18,13 @@ augroup vimrc-checktime
 	autocmd WinEnter * checktime
 augroup END
 
+
+
+" indent-guides
+autocmd VimEnter,Colorscheme * :highlight IndentGuidesOdd  guibg=grey26 guifg=grey22 ctermbg=black
+autocmd VimEnter,Colorscheme * :highlight IndentGuidesEven guibg=grey30 guifg=grey22 ctermbg=darkgrey
+
+
+" Emmet
+autocmd FileType html,css,scss,styl,vue EmmetInstall
+autocmd FileType html,css,scss,styl,vue map <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')

@@ -42,3 +42,20 @@ function! NERDCommenter_after()
 		let g:ft = ''
 	endif
 endfunction
+
+
+function! TsukuyomiCustomKeyMay()
+	if !hasmapto('<Plug>(TsuquyomiDefinition)')
+		map <buffer> <C-]> <Plug>(TsuquyomiDefinition)
+	endif
+	if !hasmapto('<Plug>(TsuquyomiSplitDefinition)')
+		map <buffer> <C-W>] <Plug>(TsuquyomiSplitDefinition)
+		map <buffer> <C-W><C-]> <Plug>(TsuquyomiSplitDefinition)
+	endif
+	if !hasmapto('<Plug>(TsuquyomiGoBack)')
+		map <buffer> <C-l> <Plug>(TsuquyomiGoBack)
+	endif
+	if !hasmapto('<Plug>(TsuquyomiReferences)')
+		map <buffer> <C-^> <Plug>(TsuquyomiReferences)
+	endif
+endfunction

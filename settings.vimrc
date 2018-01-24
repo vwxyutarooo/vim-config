@@ -15,12 +15,15 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 let g:python2_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
-set number
-set cursorline
-set clipboard=unnamed
 set autoread
 set backspace=indent,eol,start
+set clipboard=unnamed
+set completeopt=menuone
+set cursorline
 set mouse=a
+set nofoldenable
+set number
+set smartcase
 
 set nobackup
 set nowritebackup
@@ -65,16 +68,15 @@ let g:ackprg = 'ag --vimgrep'
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_stop_completion = ['<ENTER>']
 let g:ycm_confirm_extra_conf = 0
-"let g:ycm_python_binary_path = '/usr/bin/python'
-"let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
 
 " NERDTree
 autocmd vimenter * NERDTree
-let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_open_on_console_startup = 1
 " let g:nerdtree_tabs_autoclose=0
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.DS_Store', '\.git$', 'node_modules$']
+let NERDTreeMapQuit = "Q"
 
 
 " NERDCommenter
@@ -96,26 +98,33 @@ let g:fzf_action = {
 let g:ale_sign_column_always = 1
 let g:ale_lint_delay = 600
 let g:ale_lint_on_save = 0
-let g:airline#extensions#ale#enabled = 1
 let g:ale_linters = {
-	\ 'php': [],
-	\ 'html': [],
+	\ 'bash': 'all',
 	\ 'css': ['stylelint'],
+	\ 'html': ['tidy'],
 	\ 'javascript': ['eslint'],
-	\ 'vue': ['eslint']
+	\ 'json': 'all',
+	\ 'make': 'all',
+	\ 'php': [],
+	\ 'pug': 'all',
+	\ 'python': ['pylint'],
+	\ 'scss': ['stylelint'],
+	\ 'typescript': ['tsuquyomi', 'tslint', 'tsserver', 'typecheck'],
+	\ 'vim': 'all',
+	\ 'vue': ['eslint', 'tsuquyomi'],
+	\ 'yaml': 'all'
 \ }
+let g:ale_linter_aliases = { 'vue': ['html', 'css', 'scss', 'javascript', 'typescript'] }
 let g:ale_fixers = {
 	\ 'css': ['stylelint'],
 	\ 'javascript': ['eslint']
 \ }
-let g:ale_linter_aliases = { 'vue': ['html', 'css', 'scss', 'javascript'] }
 
 
 " devicons
 if (has("guifont"))
 	set guifont=SauceCodePro\ Nerd\ Font:h12
 endif
-let g:airline_powerline_fonts = 1
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
@@ -123,10 +132,19 @@ let g:DevIconsEnableFoldersOpenClose = 1
 
 
 " airline
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#cursormode#enabled = 0
+let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#fnamecollapse = 0
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_theme = 'quantum'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='quantum'
 
 
 " indent-guides
@@ -134,12 +152,9 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify', 'tagbar', 'vimfiler', 'markdown', 'minimap']
-autocmd VimEnter,Colorscheme * :highlight IndentGuidesOdd  guibg=grey26 guifg=grey22 ctermbg=black
-autocmd VimEnter,Colorscheme * :highlight IndentGuidesEven guibg=grey30 guifg=grey22 ctermbg=darkgrey
 
 
 " markdown
-set nofoldenable
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini', 'js=javascript']
 
@@ -148,13 +163,12 @@ let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=do
 let g:user_emmet_install_global = 0
 let g:user_emmet_expandabbr_key = '<Tab>'
 let g:user_emmet_expandword_key = '<Tab>'
-autocmd FileType html,css,scss,styl,vue EmmetInstall
-autocmd FileType html,css,scss,styl,vue map <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
 
 
-" vim-jsx
-let g:jsx_ext_required = 1
+" tsuquyomi
+let g:tsuquyomi_disable_quickfix = 1
 
 
 " vim-vue
 let g:vue_disable_pre_processors = 1
+let g:tsuquyomi_disable_default_mappings = 1
