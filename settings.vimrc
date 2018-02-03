@@ -12,8 +12,8 @@ endif
 
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
-let g:python2_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = system('echo -n $(pyenv which python3)')
 
 set autoread
 set backspace=indent,eol,start
@@ -68,6 +68,7 @@ let g:ackprg = 'ag --vimgrep'
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_stop_completion = ['<ENTER>']
 let g:ycm_confirm_extra_conf = 0
+let g:ycm_path_to_python_interpreter = g:python3_host_prog
 
 
 " NERDTree
@@ -117,7 +118,9 @@ let g:ale_linters = {
 let g:ale_linter_aliases = { 'vue': ['html', 'css', 'scss', 'javascript', 'typescript'] }
 let g:ale_fixers = {
 	\ 'css': ['stylelint'],
-	\ 'javascript': ['eslint']
+	\ 'javascript': ['eslint'],
+	\ 'typescript': ['tslint'],
+	\ 'vue': ['eslint']
 \ }
 
 
