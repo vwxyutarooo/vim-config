@@ -65,10 +65,13 @@ let g:ackprg = 'ag --vimgrep'
 
 
 " YouCompleteMe
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_stop_completion = ['<ENTER>']
-let g:ycm_confirm_extra_conf = 0
+let g:ycm_min_num_of_chars_for_completion = 4
 let g:ycm_path_to_python_interpreter = g:python3_host_prog
+let g:ycm_max_num_candidates = 10
 
 
 " NERDTree
@@ -159,7 +162,7 @@ let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify', 'tagbar
 
 " markdown
 let g:vim_markdown_conceal = 0
-let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini', 'js=javascript']
+let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini', 'js=javascript', 'ts="typescript"']
 
 
 " Emmet
@@ -175,3 +178,4 @@ let g:tsuquyomi_disable_quickfix = 1
 " vim-vue
 let g:vue_disable_pre_processors = 1
 let g:tsuquyomi_disable_default_mappings = 1
+
