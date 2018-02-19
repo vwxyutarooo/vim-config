@@ -24,6 +24,7 @@ set mouse=a
 set nofoldenable
 set number
 set smartcase
+set updatetime=300
 
 set nobackup
 set nowritebackup
@@ -72,6 +73,17 @@ let g:ycm_key_list_stop_completion = ['<ENTER>']
 let g:ycm_min_num_of_chars_for_completion = 4
 let g:ycm_path_to_python_interpreter = g:python3_host_prog
 let g:ycm_max_num_candidates = 10
+let g:ycm_filetype_blacklist = {
+	\ 'tagbar' : 1,
+	\ 'qf' : 1,
+	\ 'notes' : 1,
+	\ 'unite' : 1,
+	\ 'text' : 1,
+	\ 'vimwiki' : 1,
+	\ 'pandoc' : 1,
+	\ 'infolog' : 1,
+	\ 'mail' : 1
+\ }
 
 
 " NERDTree
