@@ -7,7 +7,7 @@ if (has("termguicolors"))
   set termguicolors
 endif
 if has("gui_vimr")
-	" Here goes some VimR specific settings like
+  " Here goes some VimR specific settings like
 endif
 
 
@@ -74,15 +74,15 @@ let g:ycm_min_num_of_chars_for_completion = 4
 let g:ycm_path_to_python_interpreter = g:python3_host_prog
 let g:ycm_max_num_candidates = 10
 let g:ycm_filetype_blacklist = {
-	\ 'tagbar' : 1,
-	\ 'qf' : 1,
-	\ 'notes' : 1,
-	\ 'unite' : 1,
-	\ 'text' : 1,
-	\ 'vimwiki' : 1,
-	\ 'pandoc' : 1,
-	\ 'infolog' : 1,
-	\ 'mail' : 1
+  \ 'tagbar' : 1,
+  \ 'qf' : 1,
+  \ 'notes' : 1,
+  \ 'unite' : 1,
+  \ 'text' : 1,
+  \ 'vimwiki' : 1,
+  \ 'pandoc' : 1,
+  \ 'infolog' : 1,
+  \ 'mail' : 1
 \ }
 
 
@@ -103,10 +103,10 @@ let g:NERDSpaceDelims = 1
 let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 let g:fzf_layout = { 'window': '-tabnew' }
 let g:fzf_action = {
-	\ 'enter': 'tabedit',
-	\ 'ctrl-t': 'edit',
-	\ 'ctrl-x': 'split',
-	\ 'ctrl-v': 'vsplit',
+  \ 'enter': 'tabedit',
+  \ 'ctrl-t': 'edit',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit',
 \ }
 
 
@@ -115,33 +115,33 @@ let g:ale_sign_column_always = 1
 let g:ale_lint_delay = 600
 let g:ale_lint_on_save = 0
 let g:ale_linters = {
-	\ 'bash': 'all',
-	\ 'css': ['stylelint'],
-	\ 'html': ['tidy'],
-	\ 'javascript': ['eslint'],
-	\ 'json': 'all',
-	\ 'make': 'all',
-	\ 'php': [],
-	\ 'pug': 'all',
-	\ 'python': ['pylint'],
-	\ 'scss': ['stylelint'],
-	\ 'typescript': ['tsuquyomi', 'tslint', 'tsserver', 'typecheck'],
-	\ 'vim': 'all',
-	\ 'vue': ['eslint', 'tsuquyomi'],
-	\ 'yaml': 'all'
+  \ 'bash': 'all',
+  \ 'css': ['stylelint'],
+  \ 'html': ['tidy'],
+  \ 'javascript': ['eslint'],
+  \ 'json': 'all',
+  \ 'make': 'all',
+  \ 'php': [],
+  \ 'pug': 'all',
+  \ 'python': ['pylint'],
+  \ 'scss': ['stylelint'],
+  \ 'typescript': ['tsuquyomi', 'tslint', 'tsserver', 'typecheck'],
+  \ 'vim': 'all',
+  \ 'vue': ['eslint', 'tsuquyomi'],
+  \ 'yaml': 'all'
 \ }
 let g:ale_linter_aliases = { 'vue': ['html', 'css', 'scss', 'javascript', 'typescript'] }
 let g:ale_fixers = {
-	\ 'css': ['stylelint'],
-	\ 'javascript': ['eslint'],
-	\ 'typescript': ['tslint'],
-	\ 'vue': ['eslint']
+  \ 'css': ['stylelint'],
+  \ 'javascript': ['eslint'],
+  \ 'typescript': ['tslint'],
+  \ 'vue': ['eslint']
 \ }
 
 
 " devicons
 if (has("guifont"))
-	set guifont=SauceCodePro\ Nerd\ Font:h12
+  set guifont=SauceCodePro\ Nerd\ Font:h12
 endif
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
