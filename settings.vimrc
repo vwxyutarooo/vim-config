@@ -174,7 +174,14 @@ let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify', 'tagbar
 
 " markdown
 let g:vim_markdown_conceal = 0
-let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini', 'js=javascript', 'ts="typescript"']
+let g:vim_markdown_fenced_languages = [
+  \ 'c++=cpp',
+  \ 'viml=vim',
+  \ 'bash=sh',
+  \ 'ini=dosini',
+  \ 'js=javascript',
+  \ 'ts=typescript'
+\ ]
 
 
 " Emmet
@@ -190,4 +197,9 @@ let g:tsuquyomi_disable_quickfix = 1
 " vim-vue
 let g:vue_disable_pre_processors = 1
 let g:tsuquyomi_disable_default_mappings = 1
+
+
+" git-gutter
+let g:gitgutter_eager = 0
+let g:gitgutter_realtime = 0
 
