@@ -28,3 +28,9 @@ autocmd VimEnter,Colorscheme * :highlight IndentGuidesEven guibg=grey30 guifg=gr
 " Emmet
 autocmd FileType html,css,scss,styl,vue EmmetInstall
 autocmd FileType html,css,scss,styl,vue map <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
+
+
+augroup set-customsyntax
+  autocmd!
+  autocmd BufNewFile,BufRead *.volt,*.twig set syntax=html | set filetype=html
+augroup END
