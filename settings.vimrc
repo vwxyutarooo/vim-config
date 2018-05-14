@@ -12,8 +12,9 @@ endif
 
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
-let g:python_host_prog = '/usr/bin/python'
+let g:python_host_prog = system('echo -n $(pyenv which python2)')
 let g:python3_host_prog = system('echo -n $(pyenv which python3)')
+" let g:python3_host_prog = '/Volumes/Media_HD/Users/Yutaro/.pyenv/versions/3.6.5/bin/python3'
 
 set autoread
 set backspace=indent,eol,start
@@ -72,7 +73,7 @@ let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_stop_completion = ['<ENTER>']
 let g:ycm_min_num_of_chars_for_completion = 4
 let g:ycm_path_to_python_interpreter = g:python3_host_prog
-let g:ycm_max_num_candidates = 10
+let g:ycm_max_num_candidates = 30
 let g:ycm_filetype_blacklist = {
   \ 'tagbar' : 1,
   \ 'qf' : 1,
@@ -201,5 +202,3 @@ let g:tsuquyomi_disable_default_mappings = 1
 
 " git-gutter
 let g:gitgutter_eager = 0
-let g:gitgutter_realtime = 0
-

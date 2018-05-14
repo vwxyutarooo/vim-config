@@ -1,78 +1,69 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Make sure you use single quotes
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 
-" Plugins
+
 " Code helping
-Plugin 'valloric/youcompleteme'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plugin 'junegunn/fzf.vim'
-Plugin 'mileszs/ack.vim'
-" Plugin 'eugen0329/vim-esearch'
-Plugin 'vwxyutarooo/vim-esearch'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'mattn/emmet-vim'
-Plugin 'w0rp/ale'
-Plugin 'tpope/vim-eunuch'
-Plugin 'heavenshell/vim-jsdoc'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'godlygeek/tabular'
-Plugin 'tpope/vim-surround'
-Plugin 'moll/vim-node'
-Plugin 'terryma/vim-expand-region'
+Plug 'valloric/youcompleteme', { 'do': 'python3 ./install.py --js-completer' }
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+" Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
+" Plug 'eugen0329/vim-esearch'
+Plug 'vwxyutarooo/vim-esearch'
+Plug 'scrooloose/nerdcommenter'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'mattn/emmet-vim'
+Plug 'w0rp/ale'
+Plug 'tpope/vim-eunuch'
+Plug 'heavenshell/vim-jsdoc'
+Plug 'jiangmiao/auto-pairs'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-surround'
+Plug 'moll/vim-node'
+Plug 'terryma/vim-expand-region'
+" Plug 'prettier/vim-prettier', {
+  " \ 'do': 'yarn install',
+  " \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " Integration
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
 
 " Extend UI
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'vim-airline/vim-airline'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'majutsushi/tagbar'
-Plugin 'vwxyutarooo/vim-nerdtree-syntax-highlight'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'vim-airline/vim-airline'
+Plug 'ryanoasis/vim-devicons'
+Plug 'airblade/vim-gitgutter'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'majutsushi/tagbar'
+Plug 'vwxyutarooo/vim-nerdtree-syntax-highlight'
 
 " Languages
-Plugin 'othree/yajs.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'posva/vim-vue'
-Plugin 'Quramy/tsuquyomi'
-Plugin 'othree/html5.vim'
-Plugin 'digitaltoad/vim-pug'
-Plugin 'wavded/vim-stylus'
-Plugin 'plasticboy/vim-markdown'
+Plug 'othree/yajs.vim'
+Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+" depends by tsuquyomi
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'posva/vim-vue'
+Plug 'Quramy/tsuquyomi'
+Plug 'othree/html5.vim'
+Plug 'digitaltoad/vim-pug'
+Plug 'wavded/vim-stylus'
+Plug 'plasticboy/vim-markdown'
 
 " Syntax
-Plugin 'mhartington/oceanic-next'
-Plugin 'tyrannicaltoucan/vim-quantum'
+Plug 'mhartington/oceanic-next'
+Plug 'tyrannicaltoucan/vim-quantum'
 
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" Initialize plugin system
+call plug#end()
