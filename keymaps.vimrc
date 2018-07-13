@@ -1,8 +1,7 @@
 " Key maps
 noremap <ESC><ESC> :noh<ENTER>
 noremap <C-p> :FZF<ENTER>
-noremap <C-j> :GFiles?<ENTER>
-noremap <C-a> :ALEFix<ENTER>
+noremap <C-j> :Files?<ENTER>
 
 map Q <Nop>
 
