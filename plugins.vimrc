@@ -11,7 +11,6 @@ call plug#begin('~/.vim/plugged')
 " Code helping
 Plug 'valloric/youcompleteme', { 'do': 'python3 ./install.py --js-completer' }
 Plug 'junegunn/fzf', { 'do': './install --bin' }
-" Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 " Plug 'eugen0329/vim-esearch'
 Plug 'vwxyutarooo/vim-esearch'
@@ -28,9 +27,9 @@ Plug 'godlygeek/tabular'
 Plug 'tpope/vim-surround'
 Plug 'moll/vim-node'
 Plug 'terryma/vim-expand-region'
-" Plug 'prettier/vim-prettier', {
-  " \ 'do': 'yarn install',
-  " \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " Integration
 Plug 'mattn/webapi-vim'
@@ -45,20 +44,20 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'majutsushi/tagbar'
-Plug 'vwxyutarooo/vim-nerdtree-syntax-highlight'
+Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 
 " Languages
+Plug 'chase/vim-ansible-yaml'
 Plug 'othree/yajs.vim'
-Plug 'mxw/vim-jsx'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
-" depends by tsuquyomi
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'posva/vim-vue'
-Plug 'Quramy/tsuquyomi'
+" Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+" Plug 'Quramy/tsuquyomi'
 Plug 'othree/html5.vim'
 Plug 'digitaltoad/vim-pug'
-Plug 'wavded/vim-stylus'
 Plug 'plasticboy/vim-markdown'
+Plug 'jparise/vim-graphql'
 
 " Syntax
 Plug 'mhartington/oceanic-next'
