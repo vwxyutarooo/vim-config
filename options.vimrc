@@ -47,10 +47,6 @@ let g:fzf_action = {
 
 
 " ALE
-" let g:ale_set_loclist = 1
-" let g:ale_open_list = 1
-" let g:ale_list_window_size = 5
-
 let g:ale_completion_enabled = 1
 let g:ale_lint_delay = 600
 let g:ale_lint_on_save = 0
@@ -65,16 +61,18 @@ let g:ale_linters = {
   \ 'pug': 'all',
   \ 'python': ['pylint'],
   \ 'scss': ['stylelint'],
-  \ 'typescript': ['tslint', 'tsserver', 'typecheck'],
+  \ 'typescript': ['tsserver', 'typecheck', 'tslint'],
   \ 'vim': 'all',
   \ 'vue': ['eslint', 'tsuquyomi'],
   \ 'yaml': 'all'
 \ }
-let g:ale_linter_aliases = { 'vue': ['html', 'css', 'scss', 'javascript', 'typescript'] }
+let g:ale_linter_aliases = {
+  \ 'vue': ['html', 'css', 'scss', 'javascript', 'typescript']
+\ }
 let g:ale_fixers = {
   \ 'css': ['stylelint'],
   \ 'javascript': ['prettier', 'eslint'],
-  \ 'typescript': ['prettier', 'tslint'],
+  \ 'typescript': ['tsserver', 'typecheck', 'prettier', 'tslint'],
   \ 'vue': ['eslint']
 \ }
 
@@ -130,16 +128,19 @@ let g:user_emmet_expandabbr_key = '<Tab>'
 let g:user_emmet_expandword_key = '<Tab>'
 
 
-" tsuquyomi
-" let g:tsuquyomi_disable_quickfix = 1
-" let g:tsuquyomi_disable_default_mappings = 1
-" let g:tsuquyomi_completion_detail = 1
-
-
 " vim-vue
 let g:vue_disable_pre_processors = 1
 
 
 " git-gutter
 let g:gitgutter_eager = 0
+
+
+" rainbow
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+  \ 'separately': {
+    \ 'nerdtree': 0,
+  \ }
+\ }
 

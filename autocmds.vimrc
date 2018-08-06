@@ -22,7 +22,7 @@ augroup END
 " TypeScript
 augroup ts-tooltip
   autocmd!
-  autocmd FileType typescript nmap <buffer> <Leader>t :ALEHover<CR>
+  autocmd FileType typescript,typescript.tsx nmap <buffer> <Leader>t :ALEHover<CR>
 augroup END
 
 
