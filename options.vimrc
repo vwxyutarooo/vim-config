@@ -1,5 +1,4 @@
 " YouCompleteMe
-" let g:ycm_confirm_extra_conf = 0
 let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_stop_completion = ['<ENTER>']
@@ -15,6 +14,7 @@ let g:ycm_filetype_blacklist = {
   \ 'infolog' : 1,
   \ 'mail' : 1
 \ }
+let g:ycm_goto_buffer_command = 'split'
 
 
 " NERDTree

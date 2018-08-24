@@ -37,3 +37,6 @@ imap <C-Space> <C-X><C-O>
 if !exists("g:surround_no_mappings") || ! g:surround_no_mappings
   xmap s <Plug>VSurround
 endif
+
+
+noremap <leader>jd :tab YcmCompleter GoTo
