@@ -49,7 +49,6 @@ Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 " Languages
 Plug 'chase/vim-ansible-yaml'
 Plug 'othree/yajs.vim'
-Plug 'mxw/vim-jsx'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'leafgarland/typescript-vim'
 Plug 'posva/vim-vue'
