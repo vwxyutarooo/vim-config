@@ -19,6 +19,13 @@ augroup vimrc-checktime
 augroup END
 
 
+augroup spell-check
+  autocmd!
+  autocmd FileType markdown setlocal spell
+  autocmd FileType markdown set spelllang=en,cjk
+augroup END
+
+
 " TypeScript
 augroup ts-tooltip
   autocmd!
