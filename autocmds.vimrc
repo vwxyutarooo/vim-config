@@ -9,7 +9,6 @@ augroup END
 augroup cursor-line
   autocmd!
   autocmd VimEnter,WinEnter,BufWinEnter *.vue setlocal nocursorline
-  " autocmd WinLeave * setlocal nocursorline
 augroup END
 
 
@@ -27,9 +26,14 @@ augroup END
 
 
 " TypeScript
+augroup typescript-tsx
+  autocmd!
+  autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+augroup END
+
 augroup ts-tooltip
   autocmd!
-  autocmd FileType typescript,typescript.tsx nmap <buffer> <Leader>t :ALEHover<CR>
+  autocmd FileType typescript,typescript.tsx nmap <buffer> <Leader>t :YcmCompleter GetType<CR>
 augroup END
 
 
@@ -60,3 +64,4 @@ augroup set-json-syntax
   autocmd!
   autocmd BufNewFile,BufRead .*rc set syntax=json | set filetype=json
 augroup END
+

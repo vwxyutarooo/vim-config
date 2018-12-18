@@ -39,4 +39,6 @@ if !exists("g:surround_no_mappings") || ! g:surround_no_mappings
 endif
 
 
-noremap <leader>jd :tab YcmCompleter GoTo
+noremap <leader>jd :tab YcmCompleter GoTo <ENTER>
+noremap <leader>gd :ALEGoToDefinitionInTab <ENTER>
+

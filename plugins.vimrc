@@ -14,6 +14,7 @@ Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'mileszs/ack.vim'
 Plug 'eugen0329/vim-esearch'
 Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
@@ -25,14 +26,14 @@ Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'moll/vim-node'
 Plug 'terryma/vim-expand-region'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+Plug 'vwxyutarooo/vim-fuzzy-cursorline'
 
 " Integration
-Plug 'mattn/webapi-vim'
+Plug 'mattn/webapi-vim' " Depended by gist-vim
 Plug 'mattn/gist-vim'
 
 " Extend UI
@@ -49,17 +50,18 @@ Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 " Languages
 Plug 'chase/vim-ansible-yaml'
 Plug 'othree/yajs.vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'leafgarland/typescript-vim'
+" Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'MaxMEllon/vim-jsx-pretty'
+" Plug 'peitalin/vim-jsx-typescript'
 Plug 'posva/vim-vue'
 Plug 'othree/html5.vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'plasticboy/vim-markdown'
 Plug 'jparise/vim-graphql'
-Plug 'luochen1990/rainbow'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Syntax
-Plug 'mhartington/oceanic-next'
 Plug 'tyrannicaltoucan/vim-quantum'
 
 

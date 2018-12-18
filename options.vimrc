@@ -14,7 +14,11 @@ let g:ycm_filetype_blacklist = {
   \ 'infolog' : 1,
   \ 'mail' : 1
 \ }
-let g:ycm_goto_buffer_command = 'split'
+let g:ycm_goto_buffer_command = 'split-or-existing-window'
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['javascript'] = ['.']
 
 
 " NERDTree
@@ -47,7 +51,7 @@ let g:fzf_action = {
 
 
 " ALE
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 let g:ale_lint_delay = 600
 let g:ale_lint_on_save = 0
 let g:ale_linters = {
@@ -72,7 +76,7 @@ let g:ale_linter_aliases = {
 let g:ale_fixers = {
   \ 'css': ['stylelint'],
   \ 'javascript': ['prettier', 'eslint'],
-  \ 'typescript': ['tsserver', 'typecheck', 'prettier', 'tslint'],
+  \ 'typescript': ['prettier', 'tslint'],
   \ 'vue': ['eslint']
 \ }
 
@@ -81,8 +85,7 @@ let g:ale_fixers = {
 if (has("guifont"))
   set guifont=SauceCodePro\ Nerd\ Font:h12
 endif
-let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+" let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 
@@ -134,13 +137,4 @@ let g:vue_disable_pre_processors = 1
 
 " git-gutter
 let g:gitgutter_eager = 0
-
-
-" rainbow
-let g:rainbow_active = 1
-let g:rainbow_conf = {
-  \ 'separately': {
-    \ 'nerdtree': 0,
-  \ }
-\ }
 
