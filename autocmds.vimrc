@@ -5,6 +5,11 @@ augroup vim-grep
   autocmd QuickFixCmdPost *grep* cwindow
 augroup END
 
+augroup nerdtree
+  autocmd!
+  autocmd StdinReadPre * let s:std_in = 1
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | let g:nerdtree_tabs_open_on_console_startup = 1 | endif
+augroup END
 
 augroup cursor-line
   autocmd!
