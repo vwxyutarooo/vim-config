@@ -30,7 +30,6 @@ Plug 'terryma/vim-expand-region'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
-Plug 'vwxyutarooo/vim-fuzzy-cursorline'
 
 " Integration
 Plug 'mattn/webapi-vim' " Depended by gist-vim

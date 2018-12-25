@@ -4,12 +4,22 @@ language en_US
 if has("nvim")
   let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
   set inccommand=split
+else
+  set cursorline
 endif
 
 " For MacVim
 if has("gui_running")
   set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete:h12
   set guioptions=
+endif
+
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
 let g:python_host_prog = system('echo -n $(which python)')
