@@ -4,8 +4,6 @@ language en_US
 if has("nvim")
   let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
   set inccommand=split
-else
-  set cursorline
 endif
 
 " For MacVim
@@ -15,8 +13,8 @@ if has("gui_running")
 endif
 
 if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  let &t_SI = "\ePtmux;\e\e[5 q\e\\"
+  let &t_EI = "\ePtmux;\e\e[2 q\e\\"
 else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
@@ -45,6 +43,7 @@ set fileencoding=utf-8
 set listchars=eol:¬,tab:»-,trail:.,extends:>,precedes:<
 set list
 set conceallevel=0
+set cursorline
 
 set autoindent
 set smartindent
