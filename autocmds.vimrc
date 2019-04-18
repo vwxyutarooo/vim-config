@@ -29,13 +29,28 @@ augroup spell-check
   autocmd FileType markdown set spelllang=en,cjk
 augroup END
 
-
-" TypeScript
-augroup typescript-tsx
+" Syntax
+augroup jsx
   autocmd!
-  autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+  autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 augroup END
 
+augroup tsx
+  autocmd!
+  autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+augroup END
+
+augroup set-html-syntax
+  autocmd!
+  autocmd BufNewFile,BufRead *.volt,*.twig set syntax=html | set filetype=html
+augroup END
+
+augroup set-json-syntax
+  autocmd!
+  autocmd BufNewFile,BufRead .*rc set syntax=json | set filetype=json
+augroup END
+
+" TypeScript
 augroup ts-tooltip
   autocmd!
   autocmd FileType typescript,typescript.tsx nmap <buffer> <Leader>t :YcmCompleter GetType<CR>
@@ -58,15 +73,4 @@ augroup install-emmet
   autocmd BufNewFile,BufRead *.jsx,*.tsx EmmetInstall | map <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
 augroup END
 
-
-augroup set-html-syntax
-  autocmd!
-  autocmd BufNewFile,BufRead *.volt,*.twig set syntax=html | set filetype=html
-augroup END
-
-
-augroup set-json-syntax
-  autocmd!
-  autocmd BufNewFile,BufRead .*rc set syntax=json | set filetype=json
-augroup END
 
