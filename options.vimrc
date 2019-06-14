@@ -74,8 +74,8 @@ let g:ale_linter_aliases = {
 \ }
 let g:ale_fixers = {
   \ 'css': ['stylelint'],
-  \ 'javascript': ['prettier', 'eslint'],
-  \ 'typescript': ['prettier', 'tslint'],
+  \ 'javascript': ['eslint', 'prettier'],
+  \ 'typescript': ['tslint', 'prettier'],
   \ 'vue': ['eslint']
 \ }
 
