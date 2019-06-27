@@ -11,8 +11,6 @@ call plug#begin('~/.vim/plugged')
 " Code helping
 Plug 'valloric/youcompleteme', { 'do': 'python3 ./install.py --ts-completer --js-completer' }
 Plug 'junegunn/fzf', { 'do': './install --bin' }
-Plug 'mileszs/ack.vim'
-Plug 'eugen0329/vim-esearch'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
@@ -22,7 +20,6 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-eunuch'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'jiangmiao/auto-pairs'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -38,7 +35,7 @@ Plug 'mattn/gist-vim'
 " Extend UI
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Shougo/denite.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'

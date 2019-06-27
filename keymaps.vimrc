@@ -2,14 +2,11 @@
 noremap <ESC><ESC> :noh<ENTER>
 noremap <C-p> :FZF<ENTER>
 noremap <C-j> :Files?<ENTER>
+noremap <silent> <leader>n :NERDTreeToggle<CR>
+noremap <silent> <C-i> :NERDTreeToggle<CR>
 
 map Q <Nop>
-
-
-" Cursor move for Dvorak
-noremap t l
-noremap <C-t> <C-l>
-
+map q <Nop>
 
 " Smart way to move between windows
 map <C-j> <C-w>j
@@ -28,7 +25,6 @@ no <C-k> <C-w>k
 no <C-l> <C-w>l
 no <C-h> <C-w>h
 
-
 " Close bracket such as HTML tags
 " iabbre  <// </<C-X><C-O>
 imap <C-Space> <C-X><C-O>
@@ -42,3 +38,14 @@ endif
 noremap <leader>jd :tab YcmCompleter GoTo <ENTER>
 noremap <leader>gd :ALEGoToDefinitionInTab <ENTER>
 
+" Denite
+nmap <silent> <leader>j :Denite line<CR>
+nmap <silent> <leader>g :Denite grep<CR>
+nmap <silent> <leader>b :Denite buffer<CR>
+nmap <silent> <leader>] :DeniteCursorWord grep<CR>
+nmap <silent> <leader>y :Denite neoyank<CR>
+
+call denite#custom#var('file/rec', 'command', ['pt', '--follow', '--nogroup', '-g', ''])
+call denite#custom#var('grep', 'command', ['pt', '--nogroup', '--smart-case', '--hidden'])
+call denite#custom#var('grep', 'default_opts', [])
+call denite#custom#var('grep', 'recursive_opts', [])
