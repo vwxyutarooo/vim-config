@@ -5,11 +5,6 @@ augroup vim-grep
   autocmd QuickFixCmdPost *grep* cwindow
 augroup END
 
-augroup nerdtree
-  autocmd!
-  autocmd StdinReadPre * let s:std_in = 1
-  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | let g:nerdtree_tabs_open_on_console_startup = 1 | endif
-augroup END
 
 augroup cursor-line
   autocmd!
@@ -73,4 +68,23 @@ augroup install-emmet
   autocmd BufNewFile,BufRead *.jsx,*.tsx EmmetInstall | map <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
 augroup END
 
-
+" Define mappings
+autocmd FileType denite call s:denite_my_settings()
+function! s:denite_my_settings() abort
+  nnoremap <silent><buffer><expr> <CR>
+  \ denite#do_map('do_action')
+  noremap <silent><buffer><expr> t
+  \ denite#do_map('do_action', 'tabswitch')
+  noremap <silent><buffer><expr> <C-v>
+  \ denite#do_map('do_action', 'vsplitswitch')
+  nnoremap <silent><buffer><expr> d
+  \ denite#do_map('do_action', 'delete')
+  nnoremap <silent><buffer><expr> p
+  \ denite#do_map('do_action', 'preview')
+  nnoremap <silent><buffer><expr> q
+  \ denite#do_map('quit')
+  nnoremap <silent><buffer><expr> i
+  \ denite#do_map('open_filter_buffer')
+  nnoremap <silent><buffer><expr> <Space>
+  \ denite#do_map('toggle_select').'j'
+endfunction

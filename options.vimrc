@@ -28,18 +28,15 @@ let g:nerdtree_tabs_focus_on_files = 1
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.DS_Store', '\.git$', 'node_modules$']
 let NERDTreeMapQuit = "Q"
+let NERDTreeQuitOnOpen=1
 
 
 " NERDCommenter
 let g:NERDSpaceDelims = 1
 
 
-"ACK
-let g:ackprg = 'ag --vimgrep'
-
-
 " FZF
-let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+let $FZF_DEFAULT_COMMAND='pt --hidden --ignore .git -g ""'
 let g:fzf_layout = { 'window': '-tabnew' }
 let g:fzf_action = {
   \ 'enter': 'tabedit',
@@ -137,3 +134,5 @@ let g:vue_disable_pre_processors = 1
 " git-gutter
 let g:gitgutter_eager = 0
 
+" Unite
+let g:unite_source_history_yank_enable = 1
