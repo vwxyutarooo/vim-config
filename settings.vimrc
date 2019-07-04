@@ -54,6 +54,7 @@ set softtabstop=2
 
 set lazyredraw
 set synmaxcol=600
+set redrawtime=30000
 syntax sync minlines=256
 
 
