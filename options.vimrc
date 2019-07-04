@@ -64,7 +64,7 @@ let g:ale_linters = {
   \ 'pug': 'all',
   \ 'python': ['pylint'],
   \ 'scss': ['stylelint'],
-  \ 'typescript': ['tsserver', 'typecheck', 'tslint'],
+  \ 'typescript': ['tsserver', 'typecheck', 'eslint', 'tslint'],
   \ 'vim': 'all',
   \ 'vue': ['eslint', 'tsuquyomi'],
   \ 'yaml': 'all'
@@ -74,8 +74,8 @@ let g:ale_linter_aliases = {
 \ }
 let g:ale_fixers = {
   \ 'css': ['stylelint'],
-  \ 'javascript': ['eslint', 'prettier'],
-  \ 'typescript': ['tslint', 'prettier'],
+  \ 'javascript': ['prettier', 'eslint'],
+  \ 'typescript': ['prettier', 'eslint', 'tslint'],
   \ 'vue': ['eslint']
 \ }
 
