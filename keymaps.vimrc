@@ -2,8 +2,6 @@
 noremap <ESC><ESC> :noh<ENTER>
 noremap <C-p> :FZF<ENTER>
 noremap <C-j> :Files?<ENTER>
-noremap <silent> <leader>n :NERDTreeToggle<CR>
-noremap <silent> <C-i> :NERDTreeToggle<CR>
 
 map Q <Nop>
 map q <Nop>
@@ -13,10 +11,8 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
-map <C-t> <C-w>l
 map <C-\> <C-w>x
 map H gT
-map T gt
 map L gt
 
 " NERDTree
