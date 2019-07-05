@@ -64,8 +64,8 @@ augroup END
 augroup install-emmet
   autocmd!
   autocmd FileType html,css,scss,styl,vue,jsx,tsx EmmetInstall
-  autocmd FileType html,css,scss,styl,vue,jsx,tsx map <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
-  autocmd BufNewFile,BufRead *.jsx,*.tsx EmmetInstall | map <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
+  autocmd FileType html,css,scss,styl,vue,jsx,tsx imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
+  autocmd BufNewFile,BufRead *.jsx,*.tsx EmmetInstall | imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
 augroup END
 
 " Define mappings
