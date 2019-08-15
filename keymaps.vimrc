@@ -20,6 +20,7 @@ no <C-j> <C-w>j
 no <C-k> <C-w>k
 no <C-l> <C-w>l
 no <C-h> <C-w>h
+nnoremap <silent> <tab> :NERDTreeToggle<CR>
 
 " Close bracket such as HTML tags
 " iabbre  <// </<C-X><C-O>
