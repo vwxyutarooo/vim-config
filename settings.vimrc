@@ -64,7 +64,6 @@ set termguicolors
 syntax enable
 set background=dark
 set t_ut=
-set foldcolumn=2
 colorscheme quantum
 highlight SpecialKey guifg=#474D56
 highlight NonText guifg=#474D56
