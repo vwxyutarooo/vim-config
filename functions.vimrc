@@ -59,3 +59,7 @@ function! TsukuyomiCustomKeyMay()
     map <buffer> <C-^> <Plug>(TsuquyomiReferences)
   endif
 endfunction
+
+function! CalcNextrow()
+  return line('.') + 2
+endfunction

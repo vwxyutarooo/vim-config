@@ -21,6 +21,18 @@ endif
 let g:ycm_semantic_triggers['javascript'] = ['.']
 
 
+" Denite
+call denite#custom#var('file/rec', 'command', ['pt', '--follow', '--nogroup', '-g', ''])
+call denite#custom#var('grep', 'command', ['pt', '--nogroup', '--smart-case', '--hidden'])
+call denite#custom#var('grep', 'default_opts', [])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#option('default', {
+      \ 'split': 'floating',
+      \ 'winwidth': float2nr(&columns * 0.8),
+      \ 'wincol': float2nr((&columns - (&columns * 0.8)) / 2),
+\ })
+
+
 " NERDTree
 let g:nerdtree_tabs_synchronize_view = 0
 let g:nerdtree_tabs_synchronize_focus = 0

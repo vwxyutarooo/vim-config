@@ -39,10 +39,5 @@ noremap <leader>gd :ALEGoToDefinitionInTab <ENTER>
 nmap <silent> <leader>j :Denite line<CR>
 nmap <silent> <leader>g :Denite grep<CR>
 nmap <silent> <leader>b :Denite buffer<CR>
-nmap <silent> <leader>] :DeniteCursorWord grep<CR>
+nmap <silent> <expr> <leader>] ":DeniteCursorWord -winrow=" . CalcNextrow() . " grep <CR>"
 nmap <silent> <leader>y :Denite neoyank<CR>
-
-call denite#custom#var('file/rec', 'command', ['pt', '--follow', '--nogroup', '-g', ''])
-call denite#custom#var('grep', 'command', ['pt', '--nogroup', '--smart-case', '--hidden'])
-call denite#custom#var('grep', 'default_opts', [])
-call denite#custom#var('grep', 'recursive_opts', [])
