@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
 
 
 " Code helping
-Plug 'valloric/youcompleteme', { 'do': 'python3 ./install.py --ts-completer --js-completer' }
+Plug 'valloric/youcompleteme', { 'do': 'python3 ./install.py --ts-completer --js-completer --go-completer' }
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-sleuth'
@@ -57,6 +57,7 @@ Plug 'digitaltoad/vim-pug'
 Plug 'plasticboy/vim-markdown'
 Plug 'jparise/vim-graphql'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'fatih/vim-go'
 
 " Syntax
 Plug 'tyrannicaltoucan/vim-quantum'

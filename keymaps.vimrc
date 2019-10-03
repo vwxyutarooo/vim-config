@@ -32,9 +32,6 @@ if !exists("g:surround_no_mappings") || ! g:surround_no_mappings
 endif
 
 
-noremap <leader>jd :tab YcmCompleter GoTo <ENTER>
-noremap <leader>gd :ALEGoToDefinitionInTab <ENTER>
-
 " Denite
 nmap <silent> <leader>j :Denite line<CR>
 nmap <silent> <leader>g :Denite grep<CR>
