@@ -58,37 +58,6 @@ let g:fzf_action = {
 \ }
 
 
-" ALE
-let g:ale_completion_enabled = 0
-let g:ale_lint_delay = 600
-let g:ale_lint_on_save = 0
-let g:ale_linters = {
-  \ 'bash': 'all',
-  \ 'css': ['stylelint'],
-  \ 'html': ['tidy'],
-  \ 'javascript': ['eslint'],
-  \ 'json': 'all',
-  \ 'make': 'all',
-  \ 'php': [],
-  \ 'pug': 'all',
-  \ 'python': ['pylint'],
-  \ 'scss': ['stylelint'],
-  \ 'typescript': ['tsserver', 'typecheck', 'eslint', 'tslint'],
-  \ 'vim': 'all',
-  \ 'vue': ['eslint', 'tsuquyomi'],
-  \ 'yaml': 'all'
-\ }
-let g:ale_linter_aliases = {
-  \ 'vue': ['html', 'css', 'scss', 'javascript', 'typescript']
-\ }
-let g:ale_fixers = {
-  \ 'css': ['stylelint'],
-  \ 'javascript': ['prettier', 'eslint'],
-  \ 'typescript': ['prettier', 'eslint', 'tslint'],
-  \ 'vue': ['eslint']
-\ }
-
-
 " devicons
 if (has("guifont"))
   set guifont=SauceCodePro\ Nerd\ Font:h12
@@ -99,7 +68,6 @@ let g:DevIconsEnableFoldersOpenClose = 1
 
 
 " airline
-let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#cursormode#enabled = 0
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#enabled = 1
