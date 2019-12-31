@@ -53,9 +53,11 @@ set shiftwidth=2
 set softtabstop=2
 
 set lazyredraw
+set ttyfast
 set synmaxcol=600
-set redrawtime=60000
-syntax sync minlines=500
+set redrawtime=80000
+syntax sync minlines=20
+syntax sync fromstart
 
 
 " Theme
