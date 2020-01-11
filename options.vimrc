@@ -34,6 +34,8 @@ call denite#custom#option('default', {
 
 
 " NERDTree
+" https://github.com/ryanoasis/vim-devicons/issues/250
+highlight! link NERDTreeFlags NERDTreeDir
 let g:nerdtree_tabs_synchronize_view = 0
 let g:nerdtree_tabs_synchronize_focus = 0
 let g:nerdtree_tabs_focus_on_files = 1
