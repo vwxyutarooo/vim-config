@@ -20,9 +20,8 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-let g:python_host_prog = system('echo -n $(which python)')
-let g:python3_host_prog = system('echo -n $(which python3)')
-" let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python_host_prog = system('echo -n $(which python2)')
+let g:python3_host_prog = system('echo -n $(which python)')
 
 set autoread
 set backspace=indent,eol,start

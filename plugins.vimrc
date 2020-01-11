@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
 
 
 " Code helping
-Plug 'valloric/youcompleteme', { 'do': 'python3 ./install.py --ts-completer --js-completer --go-completer' }
+Plug 'valloric/youcompleteme', { 'do': 'python ./install.py --ts-completer --js-completer --go-completer' }
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-sleuth'
