@@ -25,6 +25,13 @@ augroup spell-check
 augroup END
 
 " Syntax
+augroup syntax
+  autocmd!
+  autocmd BufEnter * :syntax sync fromstart
+  autocmd FileType javascript syn sync ccomment javaScriptComment
+  autocmd FileType html syn region javaScript start=+<script\_[^>]*>+ keepend end=+</script\_[^>]*>+me=s-1 contains=@htmlJavaScript,htmlCssStyleComment,htmlScriptTag,@htmlPreproc
+augroup END
+
 augroup jsx
   autocmd!
   autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
