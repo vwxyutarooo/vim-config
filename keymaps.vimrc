@@ -1,7 +1,7 @@
 " Key maps
-noremap <ESC><ESC> :noh<ENTER>
-noremap <C-p> :FZF<ENTER>
-noremap <C-j> :Files?<ENTER>
+noremap <ESC><ESC> :noh<CR>
+noremap <C-p> :FZF<CR>
+noremap <C-j> :Files?<CR>
 
 map Q <Nop>
 map q <Nop>
@@ -38,3 +38,11 @@ nmap <silent> <leader>g :Denite grep<CR>
 nmap <silent> <leader>b :Denite buffer<CR>
 nmap <silent> <expr> <leader>] ":DeniteCursorWord -winrow=" . CalcNextrow() . " grep <CR>"
 nmap <silent> <leader>y :Denite neoyank<CR>
+
+
+" COC
+nmap <silent> <leader>p :CocCommand prettier.formatFile<CR>
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)

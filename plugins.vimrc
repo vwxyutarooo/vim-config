@@ -16,19 +16,15 @@ Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'tpope/vim-eunuch'
+Plug 'neoclide/coc.nvim', {
+      \ 'branch': 'release',
+      \ 'do': ':CocInstall coc-emmet coc-eslint coc-stylelint coc-git coc-prettier coc-smartf coc-yank coc-python coc-tsserver coc-css coc-yaml coc-vetur coc-pairs'
+      \ }
 Plug 'heavenshell/vim-jsdoc'
 Plug 'jiangmiao/auto-pairs'
-Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-expand-region'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " Integration
 Plug 'mattn/webapi-vim' " Depended by gist-vim
@@ -40,22 +36,18 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Shougo/denite.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
-Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'majutsushi/tagbar'
 Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 
 " Languages
 Plug 'chase/vim-ansible-yaml'
 Plug 'othree/yajs.vim'
 Plug 'leafgarland/typescript-vim'
-" Plug 'HerringtonDarkholme/yats.vim'
 " Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'mxw/vim-jsx'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'posva/vim-vue'
 Plug 'othree/html5.vim'
-Plug 'digitaltoad/vim-pug'
 Plug 'plasticboy/vim-markdown'
 Plug 'jparise/vim-graphql'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }

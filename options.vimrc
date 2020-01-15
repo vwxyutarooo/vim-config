@@ -117,10 +117,3 @@ let g:user_emmet_expandword_key = '<Tab>'
 
 " vim-vue
 let g:vue_disable_pre_processors = 1
-
-
-" git-gutter
-let g:gitgutter_eager = 0
-
-" Unite
-let g:unite_source_history_yank_enable = 1
