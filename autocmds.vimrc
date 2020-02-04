@@ -52,12 +52,6 @@ augroup set-json-syntax
   autocmd BufNewFile,BufRead .*rc set syntax=json | set filetype=json
 augroup END
 
-augroup codejump
-  autocmd!
-  autocmd BufNewFile,BufRead * call JumpDef()
-augroup END
-
-
 " indent-guides
 augroup set-indent-color-scheme
   autocmd!
