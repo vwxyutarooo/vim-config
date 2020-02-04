@@ -1,1 +1,17 @@
-{}
+{
+  "coc.preferences.jumpCommand": "tab drop",
+  "diagnostic-languageserver.filetypes": {
+    "css": "stylelint",
+    "javascript": "stylelint"
+  },
+  "diagnostic-languageserver.linters": {
+    "stylelint": {
+      "args": [
+        "--formatter",
+        "unix",
+        "--stdin-filename",
+        "%filename"
+      ]
+    }
+  }
+}
