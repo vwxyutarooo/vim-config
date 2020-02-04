@@ -41,8 +41,9 @@ nmap <silent> <leader>y :Denite neoyank<CR>
 
 
 " COC
-nmap <silent> <leader>p :CocCommand prettier.formatFile<CR>
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent> <leader>p :CocCommand prettier.formatFile<CR>
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gy <Plug>(coc-type-definition)
+nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> gr <Plug>(coc-references)
+nnoremap <buffer> <leader>t :call <SID>show_documentation()<CR>
