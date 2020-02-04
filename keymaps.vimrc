@@ -41,9 +41,12 @@ nmap <silent> <leader>y :Denite neoyank<CR>
 
 
 " COC
-nnoremap <silent> <leader>p :CocCommand prettier.formatFile<CR>
+" Remap for rename current word
+nnoremap <leader>rn <Plug>(coc-rename)
 nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gy <Plug>(coc-type-definition)
 nnoremap <silent> gi <Plug>(coc-implementation)
 nnoremap <silent> gr <Plug>(coc-references)
 nnoremap <buffer> <leader>t :call <SID>show_documentation()<CR>
+" Prettier
+nmap <silent> <leader>p :CocCommand prettier.formatFile<CR>
