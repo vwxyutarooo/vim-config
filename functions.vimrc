@@ -64,12 +64,3 @@ endfunction
 function! CalcNextrow()
   return line('.') + 2
 endfunction
-
-
-function! JumpDef()
-  if (&ft == 'go')
-    nnoremap <buffer> <leader>jd :GoDef <CR>
-  else
-    nnoremap <buffer> <leader>jd :tab YcmCompleter GoTo <CR>
-  endif
-endfunction

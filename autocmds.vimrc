@@ -52,11 +52,6 @@ augroup set-json-syntax
   autocmd BufNewFile,BufRead .*rc set syntax=json | set filetype=json
 augroup END
 
-augroup tooltip
-  autocmd!
-  autocmd FileType typescript,typescript.tsx,go nmap <buffer> <leader>t :YcmCompleter GetType<CR>
-augroup END
-
 augroup codejump
   autocmd!
   autocmd BufNewFile,BufRead * call JumpDef()
