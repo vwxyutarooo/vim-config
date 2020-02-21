@@ -25,7 +25,7 @@ function! CalcNextrow()
   return line('.') + 2
 endfunction
 
-function! s:show_documentation()
+function! ShowDocumentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
