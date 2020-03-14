@@ -89,3 +89,6 @@ function! s:denite_my_settings() abort
   nnoremap <silent><buffer><expr> <Space>
         \ denite#do_map('toggle_select').'j'
 endfunction
+
+" Coc
+autocmd BufWritePost * call coc#refresh()
