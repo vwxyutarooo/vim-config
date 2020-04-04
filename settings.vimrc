@@ -15,6 +15,8 @@ endif
 if exists('$TMUX')
   let &t_SI = "\ePtmux;\e\e[5 q\e\\"
   let &t_EI = "\ePtmux;\e\e[2 q\e\\"
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
