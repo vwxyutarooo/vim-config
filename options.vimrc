@@ -31,6 +31,8 @@ call denite#custom#option('default', {
       \ 'winwidth': float2nr(&columns * 0.8),
       \ 'wincol': float2nr((&columns - (&columns * 0.8)) / 2),
 \ })
+call denite#custom#source('grep',
+      \ 'converters', ['converter/abbr_word'])
 
 
 " NERDTree

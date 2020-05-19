@@ -34,7 +34,7 @@ endif
 
 " Denite
 nmap <silent> <leader>j :Denite line<CR>
-nmap <silent> <leader>g :Denite grep<CR>
+nmap <silent> <leader>g :Denite -no-empty grep<CR>
 nmap <silent> <leader>b :Denite buffer<CR>
 nmap <silent> <expr> <leader>] ":DeniteCursorWord -winrow=" . CalcNextrow() . " grep <CR>"
 nmap <silent> <leader>y :Denite neoyank<CR>
