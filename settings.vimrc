@@ -34,6 +34,7 @@ set nofoldenable
 set number
 set smartcase
 set updatetime=300
+set signcolumn=yes
 
 set nobackup
 set nowritebackup
