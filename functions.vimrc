@@ -25,10 +25,31 @@ function! CalcNextrow()
   return line('.') + 2
 endfunction
 
+
 function! ShowDocumentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
     call CocAction('doHover')
   endif
+endfunction
+
+
+function! s:denite_my_settings() abort
+  nnoremap <silent><buffer><expr> <CR>
+        \ denite#do_map('do_action')
+  noremap <silent><buffer><expr> t
+        \ denite#do_map('do_action', 'tabswitch')
+  noremap <silent><buffer><expr> <C-v>
+        \ denite#do_map('do_action', 'vsplitswitch')
+  nnoremap <silent><buffer><expr> d
+        \ denite#do_map('do_action', 'delete')
+  nnoremap <silent><buffer><expr> p
+        \ denite#do_map('do_action', 'preview')
+  nnoremap <silent><buffer><expr> q
+        \ denite#do_map('quit')
+  nnoremap <silent><buffer><expr> i
+        \ denite#do_map('open_filter_buffer')
+  nnoremap <silent><buffer><expr> <Space>
+        \ denite#do_map('toggle_select').'j'
 endfunction

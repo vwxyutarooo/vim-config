@@ -1,5 +1,6 @@
 " Key maps
-noremap <ESC><ESC> :noh<CR>
+noremap <silent> <ESC><ESC> :noh<CR>
+noremap <silent> <ESC><ESC><ESC> :noh <BAR> :edit<CR>
 noremap <C-p> :FZF<CR>
 noremap <C-j> :Files?<CR>
 
@@ -41,13 +42,25 @@ nmap <silent> <leader>y :Denite neoyank<CR>
 
 
 " COC
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> <leader>t :call ShowDocumentation()<CR>
 nnoremap <silent> K :call ShowDocumentation()<CR>
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Add (Neo)Vim's native statusline support.
+" NOTE: Please see `:h coc-status` for integrations with external plugins that
+" provide custom statusline: lightline.vim, vim-airline.
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
 " Prettier
 nmap <silent> <leader>p :CocCommand prettier.formatFile<CR>
