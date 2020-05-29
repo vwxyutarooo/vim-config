@@ -17,7 +17,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {
       \ 'branch': 'release',
-      \ 'do': ':CocInstall coc-emmet coc-eslint coc-stylelint coc-git coc-prettier coc-smartf coc-yank coc-python coc-tsserver coc-css coc-yaml coc-vetur coc-pairs'
+      \ 'do': ':CocInstall coc-emmet coc-eslint coc-stylelint coc-git coc-prettier coc-smartf coc-yank coc-python coc-tsserver coc-css coc-yaml coc-vetur coc-pairs coc-phpls'
       \ }
 Plug 'heavenshell/vim-jsdoc'
 Plug 'jiangmiao/auto-pairs'
