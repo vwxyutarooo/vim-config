@@ -69,7 +69,7 @@ augroup END
 " Define mappings
 augroup denite-filetype
   autocmd!
-  autocmd FileType denite call s:denite_my_settings()
+  autocmd FileType denite call Denite_my_settings()
 augroup END
 
 " Coc

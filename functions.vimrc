@@ -35,7 +35,7 @@ function! ShowDocumentation()
 endfunction
 
 
-function! s:denite_my_settings() abort
+function! Denite_my_settings() abort
   nnoremap <silent><buffer><expr> <CR>
         \ denite#do_map('do_action')
   noremap <silent><buffer><expr> t
