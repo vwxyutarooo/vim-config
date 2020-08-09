@@ -1,26 +1,3 @@
-" YouCompleteMe
-let g:ycm_enable_diagnostic_signs = 0
-let g:ycm_key_list_select_completion = ['<Down>']
-let g:ycm_key_list_stop_completion = ['<ENTER>']
-let g:ycm_path_to_python_interpreter = g:python3_host_prog
-let g:ycm_filetype_blacklist = {
-  \ 'tagbar' : 1,
-  \ 'qf' : 1,
-  \ 'notes' : 1,
-  \ 'unite' : 1,
-  \ 'text' : 1,
-  \ 'vimwiki' : 1,
-  \ 'pandoc' : 1,
-  \ 'infolog' : 1,
-  \ 'mail' : 1
-\ }
-let g:ycm_goto_buffer_command = 'split-or-existing-window'
-if !exists("g:ycm_semantic_triggers")
-  let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers['javascript'] = ['.']
-
-
 " Denite
 call denite#custom#var('file/rec', 'command', ['pt', '--follow', '--nogroup', '-g', ''])
 call denite#custom#var('grep', 'command', ['pt', '--nogroup', '--smart-case', '--hidden'])
