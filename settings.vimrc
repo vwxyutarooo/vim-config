@@ -36,6 +36,7 @@ set smartcase
 set updatetime=300
 set signcolumn=yes
 
+set hidden
 set nobackup
 set nowritebackup
 set noswapfile
