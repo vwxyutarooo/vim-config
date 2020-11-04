@@ -17,7 +17,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {
       \ 'branch': 'release',
-      \ 'do': ':CocInstall coc-emmet coc-eslint coc-stylelint coc-git coc-prettier coc-smartf coc-yank coc-python coc-tsserver coc-css coc-yaml coc-vetur coc-pairs coc-phpls'
+      \ 'do': ':CocInstall coc-emmet coc-eslint coc-stylelint coc-git coc-prettier coc-smartf coc-yank coc-python coc-tsserver coc-css coc-yaml coc-pairs coc-phpls'
       \ }
 Plug 'heavenshell/vim-jsdoc'
 Plug 'jiangmiao/auto-pairs'
@@ -48,15 +48,15 @@ Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 
 " Languages
 Plug 'chase/vim-ansible-yaml'
-Plug 'othree/yajs.vim'
+Plug 'neoclide/vim-jsx-improve'
+" Plug 'HerringtonDarkholme/yats.vim'
 Plug 'leafgarland/typescript-vim'
-Plug 'mxw/vim-jsx'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'posva/vim-vue'
 Plug 'othree/html5.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'jparise/vim-graphql'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'fatih/vim-go'
 
 " Syntax
