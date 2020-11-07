@@ -1,8 +1,5 @@
 " Key maps
 noremap <silent> <ESC><ESC> :noh<CR>
-noremap <silent> <ESC><ESC><ESC> :noh <BAR> :edit<CR>
-noremap <C-p> :FZF<CR>
-noremap <C-j> :Files?<CR>
 
 map Q <Nop>
 map q <Nop>
@@ -33,13 +30,23 @@ if !exists("g:surround_no_mappings") || ! g:surround_no_mappings
 endif
 
 
-" Denite
+" Grep
+noremap <C-p> :Files<CR>
+noremap <C-j> :Files?<CR>
 nmap <silent> <leader>j :Denite line<CR>
-nmap <silent> <leader>g :Denite -no-empty grep<CR>
+" nmap <silent> <leader>g :Denite -no-empty grep<CR>
 nmap <silent> <leader>b :Denite buffer<CR>
 nmap <silent> <expr> <leader>] ":DeniteCursorWord -winrow=" . CalcNextrow() . " grep <CR>"
 nmap <silent> <leader>y :Denite neoyank<CR>
-
+nnoremap <silent> <Leader>g :<C-u>silent call <SID>find_rip_grep()<CR>
+function! s:find_rip_grep() abort
+  call fzf#vim#grep(
+        \   'rg --ignore-file ~/.ignore --column --line-number --no-heading --hidden --smart-case .+',
+        \   1,
+        \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%', '?'),
+        \   0,
+        \ )
+endfunction
 
 " COC
 " Use tab for trigger completion with characters ahead and navigate.
