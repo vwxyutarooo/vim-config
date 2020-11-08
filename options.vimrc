@@ -29,6 +29,7 @@ let g:NERDSpaceDelims = 1
 
 
 " FZF
+let $BAT_THEME='OneHalfDark'
 let $FZF_DEFAULT_COMMAND='pt --hidden --nogroup --nocolor --global-gitignore --ignore .git -g ""'
 let g:fzf_layout = { 'window': '-tabnew' }
 let g:fzf_action = {
