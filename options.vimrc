@@ -1,17 +1,3 @@
-" Denite
-call denite#custom#var('file/rec', 'command', ['pt', '--follow', '--nogroup', '-g', ''])
-call denite#custom#var('grep', 'command', ['pt', '--nogroup', '--smart-case', '--hidden'])
-call denite#custom#var('grep', 'default_opts', [])
-call denite#custom#var('grep', 'recursive_opts', [])
-call denite#custom#option('default', {
-      \ 'split': 'floating',
-      \ 'winwidth': float2nr(&columns * 0.8),
-      \ 'wincol': float2nr((&columns - (&columns * 0.8)) / 2),
-\ })
-call denite#custom#source('grep',
-      \ 'converters', ['converter/abbr_word'])
-
-
 " NERDTree
 " https://github.com/ryanoasis/vim-devicons/issues/250
 highlight! link NERDTreeFlags NERDTreeDir

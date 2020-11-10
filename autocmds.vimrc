@@ -30,11 +30,6 @@ augroup syntax
   autocmd FileType html syn region javaScript start=+<script\_[^>]*>+ keepend end=+</script\_[^>]*>+me=s-1 contains=@htmlJavaScript,htmlCssStyleComment,htmlScriptTag,@htmlPreproc
 augroup END
 
-augroup jsx
-  autocmd!
-  autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-augroup END
-
 augroup tsx
   autocmd!
   autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
@@ -62,12 +57,6 @@ augroup END
 augroup install-emmet
   autocmd!
   autocmd FileType html,css,scss,styl,vue,jsx,tsx EmmetInstall
-augroup END
-
-" Define mappings
-augroup denite-filetype
-  autocmd!
-  autocmd FileType denite call Denite_my_settings()
 augroup END
 
 " Coc
