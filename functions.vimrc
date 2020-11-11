@@ -21,11 +21,6 @@ function! NERDCommenter_after()
 endfunction
 
 
-function! CalcNextrow()
-  return line('.') + 2
-endfunction
-
-
 function! ShowDocumentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
