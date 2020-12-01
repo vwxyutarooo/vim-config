@@ -57,7 +57,7 @@ set softtabstop=2
 
 set lazyredraw
 set ttyfast
-set synmaxcol=600
+set synmaxcol=1000
 set redrawtime=80000
 syntax sync minlines=100 maxlines=800
 
