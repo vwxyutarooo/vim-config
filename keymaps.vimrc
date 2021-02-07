@@ -1,5 +1,7 @@
 " Key maps
 noremap <silent> <ESC><ESC> :noh<CR>
+" Search selected texts
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 map Q <Nop>
 map q <Nop>
@@ -21,7 +23,6 @@ no <C-h> <C-w>h
 nnoremap <silent> <C-i> :NERDTreeToggle<CR>
 
 " Close bracket such as HTML tags
-" iabbre  <// </<C-X><C-O>
 imap <C-Space> <C-X><C-O>
 
 
