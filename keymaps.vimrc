@@ -33,7 +33,7 @@ endif
 
 " Grep
 noremap <C-p> :Files<CR>
-noremap <C-j> :Files?<CR>
+" noremap <C-j> :GFiles<CR>
 nmap <silent> <leader>j :BLines<CR>
 nmap <silent> <leader>b :Buffer<CR>
 nmap <silent> <leader>] :Rg <C-R><C-W><CR>
