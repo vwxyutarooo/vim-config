@@ -1,7 +1,5 @@
 " Key maps
 noremap <silent> <ESC><ESC> :noh<CR>
-" Search selected texts
-vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 map Q <Nop>
 map q <Nop>
