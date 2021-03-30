@@ -21,8 +21,8 @@ let $FZF_DEFAULT_COMMAND='pt --hidden --nogroup --nocolor --global-gitignore --i
 let g:fzf_layout = { 'window': 'enew' }
 let g:fzf_layout = { 'down': '~60%' }
 let g:fzf_action = {
-  \ 'enter': 'edit',
-  \ 'ctrl-t': 'tab split',
+  \ 'enter': 'tab split',
+  \ 'ctrl-t': 'edit',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit',
 \ }
