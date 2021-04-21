@@ -58,10 +58,3 @@ augroup install-emmet
   autocmd!
   autocmd FileType html,css,scss,styl,vue,jsx,tsx EmmetInstall
 augroup END
-
-" Coc
-augroup coc-options
-  autocmd!
-  " Highlight the symbol and its references when holding the cursor.
-  autocmd CursorHold * silent call CocActionAsync('highlight')
-augroup END

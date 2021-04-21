@@ -16,12 +16,8 @@ Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', {
-      \ 'branch': 'release',
-      \ 'do': ':CocInstall coc-emmet coc-eslint coc-stylelint coc-git coc-prettier coc-smartf coc-yank coc-python coc-tsserver coc-css coc-yaml coc-pairs coc-phpls'
-      \ }
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'heavenshell/vim-jsdoc'
-Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-expand-region'
