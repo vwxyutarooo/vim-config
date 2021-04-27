@@ -15,6 +15,16 @@ let g:coc_global_extensions = [
       \ 'coc-highlight'
       \ ]
 
+
+function! ShowDocumentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+
 " [Auto Commands]
 augroup coc-options
   autocmd!
