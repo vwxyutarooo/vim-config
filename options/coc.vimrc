@@ -72,4 +72,5 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " Prettier
 nmap <silent> <leader>p :CocCommand prettier.formatFile<CR>
 
-nmap <silent>go :CocCommand git.browserOpen<CR>
+nmap <silent> <leader>go :CocCommand git.browserOpen<CR>
+nmap <silent> <leader>fix :CocFix<CR>

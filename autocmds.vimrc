@@ -1,9 +1,3 @@
-augroup vim-grep
-  autocmd!
-  autocmd QuickFixCmdPost *grep* cwindow
-augroup END
-
-
 augroup cursor-line
   autocmd!
   autocmd VimEnter,WinEnter,BufWinEnter *.vue setlocal nocursorline
