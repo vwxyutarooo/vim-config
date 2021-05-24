@@ -1,3 +1,8 @@
+source ~/.config/nvim/options/coc.vimrc
+source ~/.config/nvim/options/nerd.vimrc
+source ~/.config/nvim/options/fzf.vimrc
+source ~/.config/nvim/options/airline.vimrc
+
 " indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0

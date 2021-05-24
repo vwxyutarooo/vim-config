@@ -1,9 +1,5 @@
 source ~/.config/nvim/plugins.vimrc
 source ~/.config/nvim/settings.vimrc
 source ~/.config/nvim/options.vimrc
-source ~/.config/nvim/options/coc.vimrc
-source ~/.config/nvim/options/nerd.vimrc
-source ~/.config/nvim/options/fzf.vimrc
-source ~/.config/nvim/options/airline.vimrc
 source ~/.config/nvim/keymaps.vimrc
 source ~/.config/nvim/autocmds.vimrc
