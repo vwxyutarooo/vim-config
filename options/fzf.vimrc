@@ -18,8 +18,9 @@ noremap <C-p> :Files<CR>
 nmap <silent> <leader>j :BLines<CR>
 nmap <silent> <leader>b :Buffer<CR>
 nmap <silent> <leader>] :Rg <C-R><C-W><CR>
-nmap <leader>g :Rg<space>
+nmap <C-s> :Rg<space>
 nnoremap <silent> <Leader>G :<C-u>silent call <SID>find_rip_grep()<CR>
+command RG execute "Rg"
 function! s:find_rip_grep() abort
   let command = "rg --ignore-file ~/.config/.ignore --column --line-number --no-heading --hidden --smart-case .+"
   let spec = { "options": "--delimiter : --nth 4.." }
