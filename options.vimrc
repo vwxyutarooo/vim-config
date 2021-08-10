@@ -1,8 +1,11 @@
 source ~/.config/nvim/options/coc.vimrc
 source ~/.config/nvim/options/nerd.vimrc
 source ~/.config/nvim/options/fzf.vimrc
-source ~/.config/nvim/options/telescope.vimrc
 source ~/.config/nvim/options/airline.vimrc
+
+if has("nvim")
+  source ~/.config/nvim/options/telescope.vimrc
+endif
 
 " indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
