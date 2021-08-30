@@ -2,12 +2,6 @@
 let $BAT_THEME='1337'
 let $FZF_DEFAULT_COMMAND='pt --hidden --nogroup --nocolor --global-gitignore --ignore .git -g ""'
 let g:fzf_layout = { 'down': '~60%' }
-let g:fzf_action = {
-  \ 'enter': 'tab split',
-  \ 'ctrl-t': 'edit',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit',
-\ }
 let g:fzf_buffers_jump = 1
 
 " Grep
