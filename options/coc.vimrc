@@ -2,6 +2,7 @@
 let g:coc_global_extensions = [
       \ 'coc-emmet',
       \ 'coc-eslint',
+      \ 'coc-xo',
       \ 'coc-stylelint',
       \ 'coc-git',
       \ 'coc-prettier',
