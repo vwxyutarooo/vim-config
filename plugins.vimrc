@@ -25,7 +25,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
 Plug 'heavenshell/vim-jsdoc'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
