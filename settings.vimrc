@@ -34,7 +34,6 @@ set nofoldenable
 set number
 set smartcase
 set updatetime=300
-set signcolumn=yes
 
 set hidden
 set nobackup
@@ -47,6 +46,8 @@ set listchars=eol:¬,tab:»-,trail:.,extends:>,precedes:<
 set list
 set conceallevel=0
 set cursorline
+set cursorcolumn
+set signcolumn=yes
 
 set autoindent
 set smartindent
