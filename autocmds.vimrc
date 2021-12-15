@@ -42,8 +42,8 @@ augroup END
 " indent-guides
 augroup set-indent-color-scheme
   autocmd!
-  autocmd VimEnter,Colorscheme * :highlight IndentGuidesOdd  guibg=grey26 guifg=grey22 ctermbg=black
-  autocmd VimEnter,Colorscheme * :highlight IndentGuidesEven guibg=grey30 guifg=grey22 ctermbg=darkgrey
+  autocmd VimEnter,Colorscheme * :highlight IndentGuidesOdd  guibg=#2D373B
+  autocmd VimEnter,Colorscheme * :highlight IndentGuidesEven guibg=#2D373B
 augroup END
 
 

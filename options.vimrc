@@ -26,11 +26,5 @@ let g:vim_markdown_fenced_languages = [
 \ ]
 
 
-" Emmet
-let g:user_emmet_install_global = 0
-let g:user_emmet_expandabbr_key = '<C-Tab>'
-let g:user_emmet_expandword_key = '<C-Tab>'
-
-
 " vim-vue
 let g:vue_disable_pre_processors = 1

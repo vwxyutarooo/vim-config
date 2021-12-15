@@ -1,17 +1,17 @@
 " Key maps
 noremap <silent> <ESC><ESC> :noh<CR>
 
-map Q <Nop>
-map q <Nop>
+noremap Q <Nop>
+noremap q <Nop>
 
 " Smart way to move between windows
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-h> <C-w>h
-map <C-l> <C-w>l
-map <C-\> <C-w>x
-map H gT
-map L gt
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-h> <C-w>h
+noremap <C-l> <C-w>l
+noremap <C-\> <C-w>x
+noremap H gT
+noremap L gt
 
 
 " Close bracket such as HTML tags
