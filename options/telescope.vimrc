@@ -2,15 +2,6 @@ lua << EOF
 local home = os.getenv('HOME')
 local ignore_file = home .. '/.config/.rgignore'
 local actions = require('telescope.actions')
-local grep_file_command = {
-  'rg',
-  '--files',
-  '--line-number',
-  '--column',
-  '--smart-case',
-  '--hidden',
-  '--ignore-file=' .. ignore_file
-}
 
 require('telescope').setup{
   defaults = {
@@ -34,10 +25,18 @@ require('telescope').setup{
   },
   pickers = {
     find_files = {
-      find_command = grep_file_command
+      find_command = {
+        'rg',
+        '--files',
+        '--line-number',
+        '--column',
+        '--smart-case',
+        '--hidden',
+        '--ignore-file=' .. ignore_file
+      }
     },
     file_browser = {
-      find_command = grep_file_command
+      hidden = true
     }
   }
 }
