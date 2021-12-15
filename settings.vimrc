@@ -34,6 +34,8 @@ set nofoldenable
 set number
 set smartcase
 set updatetime=300
+set timeoutlen=1000
+set ttimeoutlen=50
 
 set hidden
 set nobackup
