@@ -40,6 +40,16 @@ require('telescope').setup{
     }
   }
 }
+require('cheatsheet').setup({
+    -- For generic cheatsheets like default, unicode, nerd-fonts, etc
+    bundled_cheatsheets = {
+      disabled = { 'nerd-fonts', 'unicode' }
+    },
+    -- For plugin specific cheatsheets
+    bundled_plugin_cheatsheets = true,
+    include_only_installed_plugins = true,
+})
+require('telescope').load_extension('coc')
 EOF
 
 " Find files using Telescope command-line sugar.
