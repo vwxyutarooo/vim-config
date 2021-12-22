@@ -49,7 +49,6 @@ require('cheatsheet').setup({
     bundled_plugin_cheatsheets = true,
     include_only_installed_plugins = true,
 })
-require('telescope').load_extension('coc')
 EOF
 
 " Find files using Telescope command-line sugar.

@@ -18,7 +18,6 @@ if has("nvim")
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'sudormrfbin/cheatsheet.nvim'
-  Plug 'fannheyward/telescope-coc.nvim'
   " */
 endif
 
