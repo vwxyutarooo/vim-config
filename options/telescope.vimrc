@@ -37,6 +37,21 @@ require('telescope').setup{
     },
     file_browser = {
       hidden = true
+    },
+    buffers = {
+      mappings = {
+        i = {
+          -- Open in an existing buffer
+          ["<CR>"] = function(prompt_bufnr)
+            local bufnr = require("telescope.actions.state").get_selected_entry().bufnr
+            require("telescope.actions").close(prompt_bufnr) -- move to here!
+            local winid = vim.tbl_filter(function(win)
+              return vim.api.nvim_win_get_buf(win) == bufnr
+            end, vim.api.nvim_list_wins())[1]
+            vim.api.nvim_set_current_win(winid)
+          end
+        }
+      }
     }
   }
 }
