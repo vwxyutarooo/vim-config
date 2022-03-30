@@ -2,7 +2,6 @@
 let g:coc_global_extensions = [
       \ 'coc-emmet',
       \ 'coc-eslint',
-      \ 'coc-xo',
       \ 'coc-stylelint',
       \ 'coc-git',
       \ 'coc-prettier',
@@ -16,6 +15,7 @@ let g:coc_global_extensions = [
       \ 'coc-highlight'
       \ ]
 
+let g:coc_node_path = system('echo -n $(which node)')
 
 function! ShowDocumentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -32,6 +32,12 @@ augroup coc-options
   " Highlight the symbol and its references when holding the cursor.
   autocmd CursorHold * silent call CocActionAsync('highlight')
 augroup END
+
+augroup disable-sources
+  autocmd!
+  autocmd BufNewFile,BufAdd * let b:coc_disabled_sources = ['around', 'buffer', 'yank']
+augroup END
+
 
 " [Key Mappings]
 " Use tab for trigger completion with characters ahead and navigate.
@@ -75,10 +81,8 @@ nnoremap <silent> K :call ShowDocumentation()<CR>
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#coc#show_coc_status = 1
 
 " Prettier
 nmap <silent> <leader>p :CocCommand prettier.formatFile<CR>
