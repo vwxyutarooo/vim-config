@@ -35,7 +35,7 @@ augroup END
 
 augroup disable-sources
   autocmd!
-  autocmd BufNewFile,BufAdd * let b:coc_disabled_sources = ['around', 'buffer', 'yank']
+  autocmd BufNewFile,BufRead,BufAdd * let b:coc_disabled_sources = ['around', 'buffer', 'yank']
 augroup END
 
 
@@ -84,8 +84,10 @@ nmap <leader>rn <Plug>(coc-rename)
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#coc#show_coc_status = 1
 
-" Prettier
+" Formatting selected code.
 nmap <silent> <leader>p :CocCommand prettier.formatFile<CR>
+xmap <leader>f <Plug>(coc-format-selected)<CR>
+nmap <leader>f <Plug>(coc-format-selected)<CR>
 
 nmap <silent> <leader>go :CocCommand git.browserOpen<CR>
 nmap <silent> <leader>fix :CocFix<CR>
