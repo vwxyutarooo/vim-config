@@ -55,6 +55,7 @@ require('telescope').setup{
     }
   }
 }
+require('telescope').load_extension 'file_browser'
 require('cheatsheet').setup({
     -- For generic cheatsheets like default, unicode, nerd-fonts, etc
     bundled_cheatsheets = {
@@ -74,5 +75,6 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <C-f> <cmd>Telescope file_browser<cr>
 noremap <C-p> <cmd>Telescope find_files<cr>
 noremap <C-b> <cmd>Telescope buffers<cr>
+nmap <silent> <leader>] :Tg <C-R><C-W><CR>
 
 command -nargs=* Tg lua require('telescope.builtin').grep_string({ search = <q-args> })

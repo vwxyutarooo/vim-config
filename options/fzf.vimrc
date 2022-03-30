@@ -9,7 +9,7 @@ let g:fzf_buffers_jump = 1
 " noremap <C-b> :Buffers<CR>
 nmap <silent> <leader>j :BLines<CR>
 nmap <silent> <leader>b :Buffer<CR>
-nmap <silent> <leader>] :Rg <C-R><C-W><CR>
+nmap <silent> <leader>[ :Rg <C-R><C-W><CR>
 nmap <C-s> :Rg<space>
 nnoremap <silent> <Leader>G :<C-u>silent call <SID>find_rip_grep()<CR>
 command RG execute "Rg"
