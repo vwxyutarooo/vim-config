@@ -32,6 +32,7 @@ Plug 'heavenshell/vim-jsdoc'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-expand-region'
+Plug 'tpope/vim-abolish'
 
 " Integration
 Plug 'mattn/webapi-vim' " Depended by gist-vim
