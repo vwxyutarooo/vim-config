@@ -49,4 +49,4 @@ no <C-j> <C-w>j
 no <C-k> <C-w>k
 no <C-l> <C-w>l
 no <C-h> <C-w>h
-nnoremap <silent> <C-i> :NERDTreeToggle<CR>
+nnoremap <silent> <TAB> :NERDTreeToggle<CR>
