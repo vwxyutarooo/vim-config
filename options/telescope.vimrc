@@ -35,9 +35,6 @@ require('telescope').setup{
         '--ignore-file=' .. ignore_file
       }
     },
-    file_browser = {
-      hidden = true
-    },
     buffers = {
       mappings = {
         i = {
@@ -53,6 +50,11 @@ require('telescope').setup{
         }
       }
     }
+  },
+  extensions = {
+    file_browser = {
+      hidden = true
+    },
   }
 }
 require('telescope').load_extension 'file_browser'
