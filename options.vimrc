@@ -1,10 +1,11 @@
 source ~/.config/nvim/options/coc.vimrc
 source ~/.config/nvim/options/nerd.vimrc
-source ~/.config/nvim/options/fzf.vimrc
 source ~/.config/nvim/options/airline.vimrc
 
 if has("nvim")
   source ~/.config/nvim/options/telescope.vimrc
+else
+  source ~/.config/nvim/options/fzf.vimrc
 endif
 
 " indent-guides

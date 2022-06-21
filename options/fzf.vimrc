@@ -5,8 +5,8 @@ let g:fzf_layout = { 'down': '~60%' }
 let g:fzf_buffers_jump = 1
 
 " Grep
-" noremap <C-p> :Files<CR>
-" noremap <C-b> :Buffers<CR>
+noremap <C-p> :Files<CR>
+noremap <C-b> :Buffers<CR>
 nmap <silent> <leader>j :BLines<CR>
 nmap <silent> <leader>b :Buffer<CR>
 nmap <silent> <leader>[ :Rg <C-R><C-W><CR>

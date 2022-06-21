@@ -9,9 +9,6 @@ call plug#begin('~/.vim/plugged')
 
 
 " Code helping
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plug 'junegunn/fzf.vim'
-
 if has("nvim")
   " /** telescope dependencies
   Plug 'nvim-lua/popup.nvim'
@@ -19,8 +16,10 @@ if has("nvim")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-file-browser.nvim'
   Plug 'sudormrfbin/cheatsheet.nvim'
-  Plug 'nvim-telescope/telescope-file-browser.nvim'
   " */
+else
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+  Plug 'junegunn/fzf.vim'
 endif
 
 Plug 'scrooloose/nerdcommenter'
@@ -28,7 +27,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'heavenshell/vim-jsdoc'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-expand-region'
@@ -49,7 +47,6 @@ Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 " Languages
 Plug 'chase/vim-ansible-yaml'
 Plug 'neoclide/vim-jsx-improve'
-" Plug 'HerringtonDarkholme/yats.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'posva/vim-vue'
