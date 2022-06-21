@@ -24,11 +24,6 @@ augroup syntax
   autocmd FileType html syn region javaScript start=+<script\_[^>]*>+ keepend end=+</script\_[^>]*>+me=s-1 contains=@htmlJavaScript,htmlCssStyleComment,htmlScriptTag,@htmlPreproc
 augroup END
 
-augroup tsx
-  autocmd!
-  autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
-augroup END
-
 augroup set-html-syntax
   autocmd!
   autocmd BufNewFile,BufRead *.volt,*.twig set syntax=html | set filetype=html
@@ -44,11 +39,4 @@ augroup set-indent-color-scheme
   autocmd!
   autocmd VimEnter,Colorscheme * :highlight IndentGuidesOdd  guibg=#2D373B
   autocmd VimEnter,Colorscheme * :highlight IndentGuidesEven guibg=#2D373B
-augroup END
-
-
-" Emmet
-augroup install-emmet
-  autocmd!
-  autocmd FileType html,css,scss,styl,vue,jsx,tsx EmmetInstall
 augroup END
