@@ -1,19 +1,5 @@
 {
   "coc.preferences.jumpCommand": "tab drop",
-  "diagnostic-languageserver.filetypes": {
-    "css": "stylelint",
-    "javascript": "stylelint"
-  },
-  "diagnostic-languageserver.linters": {
-    "stylelint": {
-      "args": [
-        "--formatter",
-        "unix",
-        "--stdin-filename",
-        "%filename"
-      ]
-    }
-  },
   "suggest.snippetsSupport": false,
   "suggest.languageSourcePriority": 1,
   "emmet.priority": 99

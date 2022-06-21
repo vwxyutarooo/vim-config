@@ -1,5 +1,6 @@
 " [Global Options]
 let g:coc_global_extensions = [
+      \ 'coc-json',
       \ 'coc-emmet',
       \ 'coc-eslint',
       \ 'coc-stylelint',
