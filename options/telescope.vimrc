@@ -78,6 +78,6 @@ nnoremap gst <cmd>Telescope git_status<cr>
 nnoremap <C-f> <cmd>Telescope file_browser<cr>
 noremap <C-p> <cmd>Telescope find_files<cr>
 noremap <C-b> <cmd>Telescope buffers<cr>
-nmap <silent> <leader>] :Gs <C-R><C-W><CR>
+nmap <silent> <leader>] :Grep <C-R><C-W><CR>
 
-command -nargs=* Tg lua require('telescope.builtin').grep_string({ search = <q-args> })
+command -nargs=* Grep lua require('telescope.builtin').grep_string({ search = <q-args> })
