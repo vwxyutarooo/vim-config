@@ -42,7 +42,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 
 " Languages
 Plug 'chase/vim-ansible-yaml'
