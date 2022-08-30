@@ -1,3 +1,4 @@
+source ~/.config/nvim/options/coc.default.vimrc
 source ~/.config/nvim/options/coc.vimrc
 source ~/.config/nvim/options/nerd.vimrc
 source ~/.config/nvim/options/airline.vimrc
