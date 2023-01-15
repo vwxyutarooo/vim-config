@@ -44,16 +44,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
 
 " Languages
-Plug 'chase/vim-ansible-yaml'
-Plug 'neoclide/vim-jsx-improve'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'posva/vim-vue'
-Plug 'othree/html5.vim'
-Plug 'plasticboy/vim-markdown'
-Plug 'jparise/vim-graphql'
-" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'fatih/vim-go'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 " Syntax
 Plug 'tyrannicaltoucan/vim-quantum'
