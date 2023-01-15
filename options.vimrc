@@ -9,11 +9,10 @@ else
   source ~/.config/nvim/options/fzf.vimrc
 endif
 
-" indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_guide_size = 1
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify', 'tagbar', 'vimfiler', 'markdown', 'minimap', 'fzf']
+
+" indentLine
+let g:vim_json_conceal = 0
+let g:markdown_syntax_conceal = 0
 
 
 " markdown
