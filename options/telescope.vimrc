@@ -20,6 +20,7 @@ require('telescope').setup{
       '--column',
       '--smart-case',
       '--hidden',
+      '--sort-files',
       '--ignore-file=' .. ignore_file
     }
   },
@@ -32,6 +33,7 @@ require('telescope').setup{
         '--column',
         '--smart-case',
         '--hidden',
+        '--sort-files',
         '--ignore-file=' .. ignore_file
       }
     },
@@ -70,14 +72,14 @@ require('cheatsheet').setup({
 EOF
 
 " Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>tf <cmd>Telescope find_files<cr>
+nnoremap <leader>tg <cmd>Telescope live_grep<cr>
+nnoremap <leader>tb <cmd>Telescope buffers<cr>
+nnoremap <leader>th <cmd>Telescope help_tags<cr>
+nnoremap <leader>tc <cmd>Telescope file_browser grouped=true path=%:p:h<cr>
 nnoremap gst <cmd>Telescope git_status<cr>
 nnoremap <C-f> <cmd>Telescope file_browser<cr>
 noremap <C-p> <cmd>Telescope find_files<cr>
-noremap <C-b> <cmd>Telescope buffers<cr>
 nmap <silent> <leader>] :Grep <C-R><C-W><CR>
 
 command -nargs=* Grep lua require('telescope.builtin').grep_string({ search = <q-args> })
