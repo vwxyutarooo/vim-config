@@ -13,8 +13,7 @@ let g:coc_global_extensions = [
       \ 'coc-yaml',
       \ 'coc-pairs',
       \ 'coc-phpls',
-      \ 'coc-highlight',
-      \ 'coc-xo'
+      \ 'coc-highlight'
       \ ]
 
 let g:coc_node_path = system('echo -n $(which node)')
