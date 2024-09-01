@@ -76,6 +76,7 @@ highlight SpecialKey guifg=#474D56
 highlight NonText guifg=#474D56
 highlight MatchParen cterm=underline ctermbg=6 gui=underline guibg=#425762 guifg=NONE
 highlight VertSplit guibg=#2c3a41 guifg=#2c3a41
+highlight WinSeparator guibg=#2c3a41 guifg=#2c3a41
 highlight link ESearchFileName airline_tab
 highlight link ESearchMatch Search
 

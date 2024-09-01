@@ -1,9 +1,3 @@
-augroup cursor-line
-  autocmd!
-  autocmd VimEnter,WinEnter,BufWinEnter *.vue setlocal nocursorline
-augroup END
-
-
 augroup vimrc-checktime
   autocmd!
   autocmd WinEnter * checktime
