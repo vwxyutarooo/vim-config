@@ -59,7 +59,7 @@ require('telescope').setup{
     },
   }
 }
-require('telescope').load_extension 'file_browser'
+require('telescope').load_extension('file_browser')
 require('cheatsheet').setup({
     -- For generic cheatsheets like default, unicode, nerd-fonts, etc
     bundled_cheatsheets = {
