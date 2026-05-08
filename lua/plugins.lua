@@ -1,0 +1,59 @@
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+  -- Colorscheme — load first so settings.vimrc can `colorscheme quantum`
+  { "tyrannicaltoucan/vim-quantum", lazy = false, priority = 1000 },
+
+  -- Telescope
+  { "nvim-lua/popup.nvim", lazy = false },
+  { "nvim-lua/plenary.nvim", lazy = false },
+  { "nvim-telescope/telescope.nvim", lazy = false },
+  { "nvim-telescope/telescope-file-browser.nvim", lazy = false },
+  { "sudormrfbin/cheatsheet.nvim", lazy = false },
+
+  -- Editing
+  { "scrooloose/nerdcommenter", lazy = false },
+  { "tpope/vim-sleuth", lazy = false },
+  { "editorconfig/editorconfig-vim", lazy = false },
+  { "terryma/vim-multiple-cursors", lazy = false },
+  { "tpope/vim-surround", lazy = false },
+  { "terryma/vim-expand-region", lazy = false },
+  { "tpope/vim-abolish", lazy = false },
+
+  -- LSP / completion
+  { "neoclide/coc.nvim", branch = "release", lazy = false },
+
+  -- Git
+  { "tpope/vim-fugitive", lazy = false },
+
+  -- Integration
+  { "mattn/webapi-vim", lazy = false },
+  { "mattn/gist-vim", lazy = false, dependencies = { "mattn/webapi-vim" } },
+
+  -- UI
+  { "scrooloose/nerdtree", lazy = false },
+  { "Xuyuanp/nerdtree-git-plugin", lazy = false, dependencies = { "scrooloose/nerdtree" } },
+  { "vim-airline/vim-airline", lazy = false },
+  { "ryanoasis/vim-devicons", lazy = false },
+  { "Yggdroot/indentLine", lazy = false },
+
+  -- Languages / syntax
+  { "styled-components/vim-styled-components", branch = "main", lazy = false },
+  { "nvim-treesitter/nvim-treesitter", lazy = false, build = ":TSUpdate" },
+}, {
+  -- lazy.nvim options
+  install = { colorscheme = { "quantum", "habamax" } },
+  change_detection = { notify = false },
+})
