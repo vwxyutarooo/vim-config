@@ -28,6 +28,23 @@ augroup set-json-syntax
   autocmd BufNewFile,BufRead .*rc set syntax=json | set filetype=json
 augroup END
 
+" Force conceallevel=0 — it's window-local, so re-apply per window so no
+" plugin (indentLine, treesitter conceal queries, etc.) can override it.
+" Markdown is exempt; it's handled by the markdown-conceal group below.
+augroup force-conceallevel
+  autocmd!
+  autocmd FileType,BufWinEnter * if &filetype !=# 'markdown' | setlocal conceallevel=0 | endif
+augroup END
+
+" Markdown: conceal markup in normal mode (clean view), reveal raw syntax
+" while editing (insert mode).
+augroup markdown-conceal
+  autocmd!
+  autocmd FileType markdown setlocal conceallevel=1 concealcursor=
+  autocmd FileType markdown autocmd InsertEnter <buffer> setlocal conceallevel=0
+  autocmd FileType markdown autocmd InsertLeave <buffer> setlocal conceallevel=1
+augroup END
+
 " indent-guides
 augroup set-indent-color-scheme
   autocmd!

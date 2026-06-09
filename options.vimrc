@@ -14,18 +14,7 @@ endif
 " indentLine
 let g:vim_json_conceal = 0
 let g:markdown_syntax_conceal = 0
-
-
-" markdown
-let g:vim_markdown_conceal = 0
-let g:vim_markdown_fenced_languages = [
-  \ 'c++=cpp',
-  \ 'viml=vim',
-  \ 'bash=sh',
-  \ 'ini=dosini',
-  \ 'js=javascript',
-  \ 'ts=typescript'
-\ ]
+let g:indentLine_setConceal = 0
 
 
 " vim-vue
