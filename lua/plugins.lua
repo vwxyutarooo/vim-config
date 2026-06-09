@@ -51,7 +51,7 @@ require("lazy").setup({
 
   -- Languages / syntax
   { "styled-components/vim-styled-components", branch = "main", lazy = false },
-  { "nvim-treesitter/nvim-treesitter", lazy = false, build = ":TSUpdate" },
+  { "romus204/tree-sitter-manager.nvim", lazy = false },
 }, {
   -- lazy.nvim options
   install = { colorscheme = { "quantum", "habamax" } },
