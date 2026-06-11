@@ -71,8 +71,8 @@ require("lazy").setup({
           lualine_z = { "location" },
         },
         tabline = {
-          -- airline had show_buffers = 0 -> show tab pages with numbers
-          lualine_a = { { "tabs", mode = 0 } },
+          -- show tab pages labeled with the filename instead of tab numbers
+          lualine_a = { { "tabs", mode = 1 } },
         },
         extensions = { "nerdtree", "fugitive", "quickfix" },
       })
