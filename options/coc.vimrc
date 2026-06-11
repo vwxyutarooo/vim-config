@@ -39,9 +39,6 @@ augroup END
   " inoremap <expr> <cr> pumvisible() ? '\<C-y>' : '\<C-g>u\<CR>'
 " endif"
 
-let g:airline#extensions#coc#enabled = 1
-let g:airline#extensions#coc#show_coc_status = 1
-
 " Formatting selected code.
 nmap <silent> <leader>p :CocCommand prettier.formatFile<CR>
 

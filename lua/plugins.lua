@@ -45,8 +45,39 @@ require("lazy").setup({
   -- UI
   { "scrooloose/nerdtree", lazy = false },
   { "Xuyuanp/nerdtree-git-plugin", lazy = false, dependencies = { "scrooloose/nerdtree" } },
-  { "vim-airline/vim-airline", lazy = false },
   { "ryanoasis/vim-devicons", lazy = false },
+  { "nvim-tree/nvim-web-devicons", lazy = false },
+  {
+    "nvim-lualine/lualine.nvim",
+    lazy = false,
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("lualine").setup({
+        options = {
+          theme = "auto", -- derive colors from the active colorscheme
+          icons_enabled = true,
+          globalstatus = true,
+          component_separators = { left = "|", right = "|" },
+        },
+        sections = {
+          lualine_a = { "mode" },
+          lualine_b = { "diff" }, -- was airline_section_b = hunks
+          lualine_c = {
+            "filename",
+            { function() return vim.g.coc_status or "" end }, -- was airline coc extension
+          },
+          lualine_x = { "encoding", "fileformat", "filetype" },
+          lualine_y = {}, -- was airline_section_y = '' (empty)
+          lualine_z = { "location" },
+        },
+        tabline = {
+          -- airline had show_buffers = 0 -> show tab pages with numbers
+          lualine_a = { { "tabs", mode = 0 } },
+        },
+        extensions = { "nerdtree", "fugitive", "quickfix" },
+      })
+    end,
+  },
   { "Yggdroot/indentLine", lazy = false },
 
   -- Languages / syntax
