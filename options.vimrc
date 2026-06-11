@@ -10,10 +10,9 @@ else
 endif
 
 
-" indentLine
+" Disable syntax-based conceal for json/markdown
 let g:vim_json_conceal = 0
 let g:markdown_syntax_conceal = 0
-let g:indentLine_setConceal = 0
 
 
 " vim-vue

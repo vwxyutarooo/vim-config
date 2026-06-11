@@ -101,7 +101,13 @@ require("lazy").setup({
       })
     end,
   },
-  { "Yggdroot/indentLine", lazy = false },
+  -- Indent guides via virtual text (no conceal — keeps conceallevel=0 intact)
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    lazy = false,
+    opts = {},
+  },
 
   -- Languages / syntax
   { "styled-components/vim-styled-components", branch = "main", lazy = false },
