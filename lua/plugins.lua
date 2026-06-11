@@ -13,8 +13,18 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  -- Colorscheme — load first so settings.vimrc can `colorscheme quantum`
-  { "kaicataldo/material.vim", lazy = false, priority = 1000 },
+  -- Colorscheme — load first so settings.vimrc can `colorscheme material`
+  {
+    "kaicataldo/material.vim",
+    lazy = false,
+    priority = 1000,
+    init = function()
+      -- Variant must be set before settings.vimrc runs `colorscheme material`.
+      -- Options: 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker'
+      --   (plus the *-community legacy variants)
+      vim.g.material_theme_style = "default"
+    end,
+  },
 
   -- Telescope
   { "nvim-lua/popup.nvim", lazy = false },
@@ -52,9 +62,10 @@ require("lazy").setup({
     lazy = false,
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      require("lualine").setup({
+      local opts = {
         options = {
-          theme = "auto", -- derive colors from the active colorscheme
+          theme = "auto", -- set per-colorscheme below; "auto" avoids reading
+                          -- material colors before the colorscheme is loaded
           icons_enabled = true,
           globalstatus = true,
           component_separators = { left = "|", right = "|" },
@@ -75,6 +86,18 @@ require("lazy").setup({
           lualine_a = { { "tabs", mode = 1 } },
         },
         extensions = { "nerdtree", "fugitive", "quickfix" },
+      }
+      require("lualine").setup(opts)
+
+      -- Apply material.vim's bundled lualine theme once the colorscheme is
+      -- loaded (plugins are sourced before settings.vimrc runs `colorscheme
+      -- material`, so the palette isn't available at initial setup).
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        callback = function(args)
+          opts.options.theme = (args.match == "material")
+            and require("material.lualine") or "auto"
+          require("lualine").setup(opts)
+        end,
       })
     end,
   },
