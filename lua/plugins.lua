@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   -- Colorscheme — load first so settings.vimrc can `colorscheme quantum`
-  { "tyrannicaltoucan/vim-quantum", lazy = false, priority = 1000 },
+  { "kaicataldo/material.vim", lazy = false, priority = 1000 },
 
   -- Telescope
   { "nvim-lua/popup.nvim", lazy = false },
