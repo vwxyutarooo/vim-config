@@ -53,8 +53,36 @@ require("lazy").setup({
   { "mattn/gist-vim", lazy = false, dependencies = { "mattn/webapi-vim" } },
 
   -- UI
-  { "scrooloose/nerdtree", lazy = false },
-  { "Xuyuanp/nerdtree-git-plugin", lazy = false, dependencies = { "scrooloose/nerdtree" } },
+  {
+    "nvim-tree/nvim-tree.lua",
+    lazy = false,
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    init = function()
+      -- Disable netrw (recommended by nvim-tree) before it loads.
+      vim.g.loaded_netrw = 1
+      vim.g.loaded_netrwPlugin = 1
+    end,
+    config = function()
+      require("nvim-tree").setup({
+        hijack_cursor = true,
+        filters = {
+          dotfiles = false,
+          custom = { "^.git$", "^.DS_Store$", "^node_modules$" },
+        },
+        actions = {
+          open_file = {
+            quit_on_open = true,
+          },
+        },
+        git = { enable = true },
+        renderer = { group_empty = true },
+        on_attach = function(bufnr)
+          local api = require("nvim-tree.api")
+          api.config.mappings.default_on_attach(bufnr) -- keep default mappings
+        end,
+      })
+    end,
+  },
   { "ryanoasis/vim-devicons", lazy = false },
   { "nvim-tree/nvim-web-devicons", lazy = false },
   {
@@ -85,7 +113,7 @@ require("lazy").setup({
           -- show tab pages labeled with the filename instead of tab numbers
           lualine_a = { { "tabs", mode = 1 } },
         },
-        extensions = { "nerdtree", "fugitive", "quickfix" },
+        extensions = { "nvim-tree", "fugitive", "quickfix" },
       }
       require("lualine").setup(opts)
 

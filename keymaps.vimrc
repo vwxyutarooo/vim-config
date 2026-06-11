@@ -14,6 +14,10 @@ noremap H gT
 noremap L gt
 
 
+" nvim-tree
+nnoremap <silent> <TAB> :NvimTreeToggle<CR>
+
+
 " Close bracket such as HTML tags
 imap <C-Space> <C-X><C-O>
 

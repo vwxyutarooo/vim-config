@@ -1,6 +1,6 @@
 source ~/.config/nvim/options/coc.default.vimrc
 source ~/.config/nvim/options/coc.vimrc
-source ~/.config/nvim/options/nerd.vimrc
+source ~/.config/nvim/options/nerdcommenter.vimrc
 source ~/.config/nvim/options/treesitter.vimrc
 
 if has("nvim")
@@ -17,3 +17,12 @@ let g:markdown_syntax_conceal = 0
 
 " vim-vue
 let g:vue_disable_pre_processors = 1
+
+
+" devicons
+if (has("guifont"))
+  set guifont=SauceCodePro\ Nerd\ Font:h12
+endif
+" let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
