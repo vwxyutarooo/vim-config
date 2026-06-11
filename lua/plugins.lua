@@ -62,74 +62,15 @@ require("lazy").setup({
       vim.g.loaded_netrw = 1
       vim.g.loaded_netrwPlugin = 1
     end,
-    config = function()
-      require("nvim-tree").setup({
-        hijack_cursor = true,
-        filters = {
-          dotfiles = false,
-          custom = { "^.git$", "^.DS_Store$", "^node_modules$" },
-        },
-        actions = {
-          open_file = {
-            quit_on_open = true,
-          },
-        },
-        git = { enable = true },
-        renderer = { group_empty = true },
-        on_attach = function(bufnr)
-          local api = require("nvim-tree.api")
-          api.config.mappings.default_on_attach(bufnr) -- keep default mappings
-        end,
-      })
-    end,
+    -- setup() lives in lua/config/nvim-tree.lua
   },
-  { "ryanoasis/vim-devicons", lazy = false },
   { "nvim-tree/nvim-web-devicons", lazy = false },
   {
     "nvim-lualine/lualine.nvim",
     lazy = false,
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      local opts = {
-        options = {
-          theme = "auto", -- set per-colorscheme below; "auto" avoids reading
-                          -- material colors before the colorscheme is loaded
-          icons_enabled = true,
-          globalstatus = true,
-          component_separators = { left = "|", right = "|" },
-        },
-        sections = {
-          lualine_a = { "mode" },
-          lualine_b = { "diff" }, -- was airline_section_b = hunks
-          lualine_c = {
-            "filename",
-            { function() return vim.g.coc_status or "" end }, -- was airline coc extension
-          },
-          lualine_x = { "encoding", "fileformat", "filetype" },
-          lualine_y = {}, -- was airline_section_y = '' (empty)
-          lualine_z = { "location" },
-        },
-        tabline = {
-          -- show tab pages labeled with the filename instead of tab numbers
-          lualine_a = { { "tabs", mode = 1 } },
-        },
-        extensions = { "nvim-tree", "fugitive", "quickfix" },
-      }
-      require("lualine").setup(opts)
-
-      -- Apply material.vim's bundled lualine theme once the colorscheme is
-      -- loaded (plugins are sourced before settings.vimrc runs `colorscheme
-      -- material`, so the palette isn't available at initial setup).
-      vim.api.nvim_create_autocmd("ColorScheme", {
-        callback = function(args)
-          opts.options.theme = (args.match == "material")
-            and require("material.lualine") or "auto"
-          require("lualine").setup(opts)
-        end,
-      })
-    end,
+    -- setup() lives in lua/config/lualine.lua
   },
-  -- Indent guides via virtual text (no conceal — keeps conceallevel=0 intact)
   {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",

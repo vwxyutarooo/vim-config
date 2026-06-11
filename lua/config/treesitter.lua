@@ -1,19 +1,19 @@
-lua << EOF
-require('tree-sitter-manager').setup {
+-- tree-sitter-manager
+require("tree-sitter-manager").setup({
   -- A list of parser names, or 'all' (installed at startup if missing)
   ensure_installed = {
-    'c',
-    'lua',
-    'vim',
-    'vimdoc',
-    'query',
-    'markdown',
-    'markdown_inline',
-    'javascript',
-    'typescript',
-    'tsx',
-    'json',
-    'yaml'
+    "c",
+    "lua",
+    "vim",
+    "vimdoc",
+    "query",
+    "markdown",
+    "markdown_inline",
+    "javascript",
+    "typescript",
+    "tsx",
+    "json",
+    "yaml",
   },
 
   -- Automatically install missing parsers when entering a new filetype.
@@ -24,6 +24,5 @@ require('tree-sitter-manager').setup {
   highlight = true,
 
   -- Use standard regex highlighting for these languages instead.
-  nohighlight = { 'c' },
-}
-EOF
+  nohighlight = { "c" },
+})

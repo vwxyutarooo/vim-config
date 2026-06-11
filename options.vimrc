@@ -1,10 +1,12 @@
 source ~/.config/nvim/options/coc.default.vimrc
 source ~/.config/nvim/options/coc.vimrc
 source ~/.config/nvim/options/nerdcommenter.vimrc
-source ~/.config/nvim/options/treesitter.vimrc
+lua require('config.nvim-tree')
+lua require('config.lualine')
+lua require('config.treesitter')
 
 if has("nvim")
-  source ~/.config/nvim/options/telescope.vimrc
+  lua require('config.telescope')
 else
   source ~/.config/nvim/options/fzf.vimrc
 endif
@@ -19,10 +21,7 @@ let g:markdown_syntax_conceal = 0
 let g:vue_disable_pre_processors = 1
 
 
-" devicons
+" GUI font (Nerd Font for icon glyphs in GUI clients)
 if (has("guifont"))
   set guifont=SauceCodePro\ Nerd\ Font:h12
 endif
-" let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:DevIconsEnableFoldersOpenClose = 1
