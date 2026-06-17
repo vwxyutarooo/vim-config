@@ -13,16 +13,22 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  -- Colorscheme — load first so settings.vimrc can `colorscheme material`
+  -- Colorschemes — both load first so settings.vimrc can pick either one with
+  -- `colorscheme night-owl` or `colorscheme tokyonight-<style>`. Switch by
+  -- editing the `colorscheme` line in settings.vimrc.
   {
-    "kaicataldo/material.vim",
+    "haishanh/night-owl.vim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     init = function()
-      -- Variant must be set before settings.vimrc runs `colorscheme material`.
-      -- Options: 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker'
-      --   (plus the *-community legacy variants)
-      vim.g.material_theme_style = "default"
+      -- Style is used only when settings.vimrc selects a tokyonight scheme.
+      -- Options: 'storm' | 'moon' | 'night' | 'day'
+      require("tokyonight").setup({ style = "storm" })
     end,
   },
 

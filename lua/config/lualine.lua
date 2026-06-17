@@ -1,9 +1,9 @@
 -- lualine
--- Required from options.vimrc, which runs after settings.vimrc applies
--- `colorscheme material` — so the material palette is already available here.
+-- Required from options.vimrc, which runs after settings.vimrc applies the
+-- chosen `colorscheme` — so the active palette is already available here.
 local opts = {
   options = {
-    theme = "auto", -- replaced with the material theme below when active
+    theme = "auto", -- resolved per-colorscheme in apply_theme() below
     icons_enabled = true,
     globalstatus = true,
     component_separators = { left = "|", right = "|" },
@@ -21,16 +21,33 @@ local opts = {
   },
   tabline = {
     -- show tab pages labeled with the filename instead of tab numbers
-    lualine_a = { { "tabs", mode = 1 } },
+    lualine_a = {
+      {
+        "tabs",
+        mode = 1,
+        -- Default max_length is vim.o.columns / 3, which collapses tabs into
+        -- "..." quickly. Use the full window width so far more tabs stay
+        -- visible (function form keeps it correct across window resizes).
+        max_length = function()
+          return vim.o.columns
+        end,
+        -- Allow longer per-tab labels before truncating a single tab name.
+        tab_max_length = 40,
+      },
+    },
   },
   extensions = { "nvim-tree", "fugitive", "quickfix" },
 }
 
--- Use material.vim's bundled lualine theme when material is the active
--- colorscheme; reapply on colorscheme changes.
+-- Match the statusline to the active colorscheme. tokyonight ships a bundled
+-- lualine theme (colors_name is "tokyonight" or a "tokyonight-<style>"
+-- variant); night-owl ships none, so fall back to "auto", which derives the
+-- palette from the colorscheme's highlight groups. Reapply on every
+-- ColorScheme event so manual switches in settings.vimrc are tracked.
 local function apply_theme()
-  opts.options.theme = (vim.g.colors_name == "material")
-    and require("material.lualine") or "auto"
+  local is_tokyonight = (vim.g.colors_name or ""):match("^tokyonight") ~= nil
+  opts.options.theme = is_tokyonight
+    and require("lualine.themes.tokyonight") or "auto"
   require("lualine").setup(opts)
 end
 
