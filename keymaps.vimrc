@@ -13,11 +13,6 @@ noremap <C-\> <C-w>x
 noremap H gT
 noremap L gt
 
-
-" Close bracket such as HTML tags
-imap <C-Space> <C-X><C-O>
-
-
 if !exists("g:surround_no_mappings") || ! g:surround_no_mappings
   xmap s <Plug>VSurround
 endif
