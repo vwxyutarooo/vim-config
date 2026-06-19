@@ -18,3 +18,6 @@ require("nvim-tree").setup({
     api.config.mappings.default_on_attach(bufnr) -- keep default mappings
   end,
 })
+
+-- TAB toggles the tree (Vim uses fern for this; see ~/.config/vim/options.vim).
+vim.keymap.set("n", "<TAB>", "<Cmd>NvimTreeToggle<CR>", { silent = true })

@@ -71,7 +71,6 @@ set termguicolors
 syntax enable
 set background=dark
 set t_ut=
-colorscheme tokyonight-night   " or -storm / -moon / -day
 colorscheme night-owl
 highlight SpecialKey guifg=#474D56
 highlight NonText guifg=#474D56
