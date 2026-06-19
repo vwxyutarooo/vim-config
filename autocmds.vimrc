@@ -23,11 +23,6 @@ augroup set-html-syntax
   autocmd BufNewFile,BufRead *.volt,*.twig set syntax=html | set filetype=html
 augroup END
 
-augroup set-json-syntax
-  autocmd!
-  autocmd BufNewFile,BufRead .*rc set syntax=json | set filetype=json
-augroup END
-
 " Force conceallevel=0 — it's window-local, so re-apply per window so no
 " plugin (indentLine, treesitter conceal queries, etc.) can override it.
 " Markdown is exempt; it's handled by the markdown-conceal group below.
