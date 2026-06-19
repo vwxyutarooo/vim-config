@@ -12,7 +12,7 @@ local opts = {
     lualine_a = { "mode" },
     lualine_b = { "diff" }, -- was airline_section_b = hunks
     lualine_c = {
-      "filename",
+      { "filename", path = 1 },
       { function() return vim.g.coc_status or "" end }, -- was airline coc extension
     },
     lualine_x = { "encoding", "fileformat", "filetype" },

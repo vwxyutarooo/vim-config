@@ -80,6 +80,7 @@ map("n", "<leader>tc", "<cmd>Telescope file_browser grouped=true path=%:p:h<cr>"
 map("n", "gst", "<cmd>Telescope git_status<cr>")
 map("n", "<C-f>", "<cmd>Telescope file_browser<cr>")
 map("", "<C-p>", "<cmd>Telescope find_files<cr>")
+map("", "<C-b>", "<cmd>Telescope buffers<cr>")
 
 -- Grep the word under the cursor (was `:Grep <C-R><C-W><CR>`)
 map("n", "<leader>]", function()
