@@ -2,6 +2,7 @@
 local home = os.getenv("HOME")
 local ignore_file = home .. "/.config/.rgignore"
 local actions = require("telescope.actions")
+local fb_actions = require("telescope._extensions.file_browser.actions")
 
 require("telescope").setup({
   defaults = {
@@ -12,6 +13,7 @@ require("telescope").setup({
     },
     scroll_strategy = "limit",
     winblend = 20,
+    path_display = { "filename_first" },
     vimgrep_arguments = {
       "rg",
       "--no-heading",
@@ -20,7 +22,6 @@ require("telescope").setup({
       "--column",
       "--smart-case",
       "--hidden",
-      "--sort-files",
       "--ignore-file=" .. ignore_file,
     },
   },
@@ -29,11 +30,7 @@ require("telescope").setup({
       find_command = {
         "rg",
         "--files",
-        "--line-number",
-        "--column",
-        "--smart-case",
         "--hidden",
-        "--sort-files",
         "--ignore-file=" .. ignore_file,
       },
     },
@@ -56,10 +53,20 @@ require("telescope").setup({
   extensions = {
     file_browser = {
       hidden = true,
+      mappings = {
+        i = {
+          ["<C-t>"] = actions.select_tab,
+          ["<C-u>"] = fb_actions.change_cwd,
+        },
+        n = {
+          ["<C-t>"] = actions.select_tab,
+          ["<C-u>"] = fb_actions.change_cwd,
+        },
+      },
     },
   },
 })
-require("telescope").load_extension("file_browser")
+require("telescope").load_extension("fzf", "file_browser")
 require("cheatsheet").setup({
   -- For generic cheatsheets like default, unicode, nerd-fonts, etc
   bundled_cheatsheets = {

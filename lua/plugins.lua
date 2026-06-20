@@ -13,50 +13,36 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  -- Colorschemes — both load first so settings.vimrc can pick either one with
-  -- `colorscheme night-owl` or `colorscheme tokyonight-<style>`. Switch by
-  -- editing the `colorscheme` line in settings.vimrc.
   {
     "haishanh/night-owl.vim",
     lazy = false,
     priority = 1000,
   },
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    init = function()
-      -- Style is used only when settings.vimrc selects a tokyonight scheme.
-      -- Options: 'storm' | 'moon' | 'night' | 'day'
-      require("tokyonight").setup({ style = "storm" })
-    end,
-  },
 
   -- Telescope
-  { "nvim-lua/popup.nvim", lazy = false },
-  { "nvim-lua/plenary.nvim", lazy = false },
-  { "nvim-telescope/telescope.nvim", lazy = false },
-  { "nvim-telescope/telescope-file-browser.nvim", lazy = false },
-  { "sudormrfbin/cheatsheet.nvim", lazy = false },
+  {
+    'nvim-telescope/telescope.nvim',
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        'nvim-telescope/telescope-file-browser.nvim' ,
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    }
+  },
+  { "sudormrfbin/cheatsheet.nvim" },
 
   -- Editing
-  { "scrooloose/nerdcommenter", lazy = false },
-  { "tpope/vim-sleuth", lazy = false },
-  { "editorconfig/editorconfig-vim", lazy = false },
-  { "terryma/vim-multiple-cursors", lazy = false },
-  { "tpope/vim-surround", lazy = false },
-  { "terryma/vim-expand-region", lazy = false },
-  { "tpope/vim-abolish", lazy = false },
+  { "scrooloose/nerdcommenter" },
+  { "tpope/vim-sleuth" },
+  { "terryma/vim-multiple-cursors" },
+  { "tpope/vim-surround" },
+  { "terryma/vim-expand-region" },
+  { "tpope/vim-abolish" },
 
   -- LSP / completion
-  { "neoclide/coc.nvim", branch = "release", lazy = false },
+  { "neoclide/coc.nvim", branch = "release" },
 
   -- Git
-  { "tpope/vim-fugitive", lazy = false },
-
-  -- Integration
-  { "mattn/webapi-vim", lazy = false },
-  { "mattn/gist-vim", lazy = false, dependencies = { "mattn/webapi-vim" } },
+  { "tpope/vim-fugitive" },
 
   -- UI
   {
@@ -70,7 +56,7 @@ require("lazy").setup({
     end,
     -- setup() lives in lua/config/nvim-tree.lua
   },
-  { "nvim-tree/nvim-web-devicons", lazy = false },
+  { "nvim-tree/nvim-web-devicons" },
   {
     "nvim-lualine/lualine.nvim",
     lazy = false,
@@ -80,12 +66,11 @@ require("lazy").setup({
   {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
-    lazy = false,
     opts = {},
   },
 
   -- Languages / syntax
-  { "styled-components/vim-styled-components", branch = "main", lazy = false },
+  { "styled-components/vim-styled-components", branch = "main" },
   { "romus204/tree-sitter-manager.nvim", lazy = false },
 }, {
   -- lazy.nvim options

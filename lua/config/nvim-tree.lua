@@ -3,12 +3,12 @@
 require("nvim-tree").setup({
   hijack_cursor = true,
   filters = {
-    dotfiles = false, -- NERDTreeShowHidden = 1 (show hidden files)
-    custom = { "^.git$", "^.DS_Store$", "^node_modules$" }, -- NERDTreeIgnore
+    dotfiles = false,
+    custom = { "^.git$", "^.DS_Store$", "^node_modules$" },
   },
   actions = {
     open_file = {
-      quit_on_open = true, -- NERDTreeQuitOnOpen = 1
+      quit_on_open = true,
     },
   },
   git = { enable = true }, -- replaces Xuyuanp/nerdtree-git-plugin
