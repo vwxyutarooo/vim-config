@@ -70,7 +70,6 @@ require("lazy").setup({
   },
 
   -- Languages / syntax
-  { "styled-components/vim-styled-components", branch = "main" },
   { "romus204/tree-sitter-manager.nvim", lazy = false },
 }, {
   -- lazy.nvim options
